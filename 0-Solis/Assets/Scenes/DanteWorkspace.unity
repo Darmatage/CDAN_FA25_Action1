@@ -423,7 +423,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 529464110333022618, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
       propertyPath: InvIsOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 904418506213034654, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
       propertyPath: m_LocalPosition.x
