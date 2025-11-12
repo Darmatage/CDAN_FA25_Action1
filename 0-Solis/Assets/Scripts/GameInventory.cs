@@ -48,6 +48,17 @@ public class GameInventory : MonoBehaviour {
             InventoryDisplay();
       }
 
+      void Update(){
+
+
+//
+
+            if (Input.GetButtonDown("OpenCloseInventory")){
+                  OpenCloseInventory();
+            }
+      }
+
+
       void InventoryDisplay(){
             if (item1bool == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
             if (item2bool == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
