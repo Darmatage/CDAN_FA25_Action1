@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455096336286241135, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
       propertyPath: m_Name
-      value: GameHandlerCanvas
+      value: GAMEHANDLER_CANVAS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
