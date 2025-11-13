@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: cdb74e4c056ec5a478a2768c634f52d5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - flashlight: {fileID: 8777442063922181055, guid: f0f5ede58480e2c4fa109d4662ddfc59, type: 3}
+  - healthText: {instanceID: 0}
+  - tokensText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

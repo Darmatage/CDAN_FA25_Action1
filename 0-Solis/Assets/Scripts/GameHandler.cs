@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour {
 
       private GameObject player;
+      private GameObject flashlight;
       public static int playerHealth = 100;
       public int StartPlayerHealth = 100;
       public TMP_Text healthText;
