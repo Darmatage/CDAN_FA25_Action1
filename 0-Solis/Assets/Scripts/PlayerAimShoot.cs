@@ -34,18 +34,11 @@ public class PlayerAimShoot :   MonoBehaviour {
 
       void FixedUpdate(){
             //actual movement uses Rigidbody2D, so goes in FixedUpdate
-            //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            //rb.MovePosition(rb.position + movement * moveSpeed * Tsime.fixedDeltaTime);
             //actual rotation uses vector math to calculate angle, then rotates character to mouse
             Vector2 lookDir = mousePos - rb.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-            //rb.rotation = angle;
-			//shoulderFront.rotation = angle;
-			//shoulderBack.rotation = angle;
-
-		shoulderFront.rotation = Quaternion.Euler(0, 0f, angle);
-		shoulderBack.rotation = Quaternion.Euler(0, 0f, angle);
-
-			//Quaternion toRotation = Quaternion.LookRotation (Vector3.forward, angle);
-           // transform.rotation = Quaternion.RotateTowards (transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+			shoulderFront.rotation = Quaternion.Euler(0, 0f, angle);
+			shoulderBack.rotation = Quaternion.Euler(0, 0f, angle);
       }
 } 
