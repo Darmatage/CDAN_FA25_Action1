@@ -32,29 +32,24 @@ public class PlayerAimShoot :   MonoBehaviour {
             }
       }
 
-      void FixedUpdate()
+     void FixedUpdate()
 {
-    
     Vector3 scale = transform.localScale;
     bool facingLeft = mousePos.x < rb.position.x;
 
     scale.x = facingLeft ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
     transform.localScale = scale;
- 
 
+    
     Vector2 lookDir = mousePos - rb.position;
     float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-   
-  if (facingLeft)
-    lookDir.y = -lookDir.y;
+    
+    if (facingLeft)
+        angle = Mathf.Atan2(lookDir.y, -lookDir.x) * Mathf.Rad2Deg;
 
-// Reuse the existing angle variable
-angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-
-shoulderFront.rotation = Quaternion.Euler(0, 0, angle);
-shoulderBack.rotation = Quaternion.Euler(0, 0, angle);
- 
+    
+    shoulderFront.rotation = Quaternion.Euler(0, 0, angle);
+    shoulderBack.rotation = Quaternion.Euler(0, 0, angle);
 }
-
 } 

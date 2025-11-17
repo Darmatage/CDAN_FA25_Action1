@@ -254,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 658798264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29800007, y: 0.29, z: 0}
+  m_LocalPosition: {x: -0.228, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -453,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 1133710859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23999977, y: -0.59, z: 0}
+  m_LocalPosition: {x: 0.139, y: -0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -578,7 +578,7 @@ Transform:
   m_GameObject: {fileID: 1517590806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.288, y: 0.41, z: 0}
+  m_LocalPosition: {x: -0.168, y: 0.637, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -889,6 +889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAMEHANDLER_CANVAS
       objectReference: {fileID: 0}
+    - target: {fileID: 8925356599598111319, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
+      propertyPath: timer
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1177,9 +1181,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 632177696}
   - {fileID: 1517590807}
   - {fileID: 658798265}
-  - {fileID: 632177696}
   m_Father: {fileID: 3371556273610754382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7239444772993110628
