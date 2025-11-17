@@ -223,11 +223,11 @@ Transform:
   m_GameObject: {fileID: 632177695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.002, y: 0.389, z: 0}
+  m_LocalPosition: {x: 1.2820003, y: 0.389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3371556273610754382}
+  m_Father: {fileID: 6940401769265574097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &658798264
 GameObject:
@@ -254,12 +254,12 @@ Transform:
   m_GameObject: {fileID: 658798264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.28500032, y: 0.29, z: 0}
+  m_LocalPosition: {x: -0.29800007, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1616226379}
-  m_Father: {fileID: 3371556273610754382}
+  m_Father: {fileID: 6940401769265574097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679740709
 GameObject:
@@ -578,12 +578,12 @@ Transform:
   m_GameObject: {fileID: 1517590806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.275, y: 0.41, z: 0}
+  m_LocalPosition: {x: -0.288, y: 0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1133710860}
-  m_Father: {fileID: 3371556273610754382}
+  m_Father: {fileID: 6940401769265574097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1575875519
 GameObject:
@@ -986,9 +986,6 @@ Transform:
   - {fileID: 6940401769265574097}
   - {fileID: 6400896516191794840}
   - {fileID: 1813000716}
-  - {fileID: 1517590807}
-  - {fileID: 658798265}
-  - {fileID: 632177696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4463651200973974466
@@ -1179,7 +1176,10 @@ Transform:
   m_LocalPosition: {x: -0.28, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1517590807}
+  - {fileID: 658798265}
+  - {fileID: 632177696}
   m_Father: {fileID: 3371556273610754382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7239444772993110628
@@ -1275,7 +1275,7 @@ SpriteRenderer:
   m_SortingOrder: 100
   m_Sprite: {fileID: 7212270862698901188, guid: 024db69e07bcd64488b79e575927a236, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

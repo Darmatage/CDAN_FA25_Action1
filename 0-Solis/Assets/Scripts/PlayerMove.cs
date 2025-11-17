@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour {
 
       public Animator animator;
       public Rigidbody2D rb2D;
-      private bool FaceRight = true; // determine which way player is facing.
+      private bool FaceRight = false; // determine which way player is facing.
       public static float runSpeed = 10f;
       public float startSpeed = 10f;
       public bool isAlive = true;
@@ -35,9 +35,9 @@ public class PlayerMove : MonoBehaviour {
                   }
 
                   // Turning: Reverse if input is moving the Player right and Player faces left
-                 if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)){
-                        playerTurn();
-                  }
+                 //if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)){
+                   //     playerTurn();
+                 // }
            }
       }
 
