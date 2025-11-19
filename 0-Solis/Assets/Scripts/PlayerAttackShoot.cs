@@ -12,6 +12,7 @@ public class PlayerMoveAimShoot : MonoBehaviour{
       public Vector2 mousePos;
       public Transform fireBase;
       public Transform firePoint;
+	  public Transform fireBaseBase;
      
       public GameObject projectilePrefab;
       public float projectileSpeed = 10f;
@@ -52,7 +53,8 @@ public class PlayerMoveAimShoot : MonoBehaviour{
 
       void playerFire(){
             //animator.SetTrigger ("Fire");
-            Vector2 fwd = (firePoint.position - this.transform.position).normalized;
+            //Vector2 fwd = (firePoint.position - this.transform.position).normalized;
+			Vector2 fwd = (firePoint.position - fireBaseBase.position).normalized;
 
             /*
             //MUZZLEFLASH:
@@ -63,7 +65,7 @@ public class PlayerMoveAimShoot : MonoBehaviour{
             */
 
             //PROJECTILE
-            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             projectile.GetComponent<Rigidbody2D>().AddForce(fwd * projectileSpeed, ForceMode2D.Impulse);
       }
 }

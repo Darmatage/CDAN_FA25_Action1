@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class PlayerAimShoot :   MonoBehaviour {
+public class PlayerAim :   MonoBehaviour {
 
       //public float moveSpeed = 5f;
       private Rigidbody2D rb;
@@ -45,10 +45,12 @@ public class PlayerAimShoot :   MonoBehaviour {
     float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
     
-    if (facingLeft)
+    if (facingLeft){
         angle = Mathf.Atan2(lookDir.y, -lookDir.x) * Mathf.Rad2Deg * -1;
+		//fireBase.rotation = Quaternion.Euler(0, 0, angle +360);
+		//fireBase.localScale = scale * -1;
+	}
 
-    
     shoulderFront.rotation = Quaternion.Euler(0, 0, angle);
     shoulderBack.rotation = Quaternion.Euler(0, 0, angle);
 }
