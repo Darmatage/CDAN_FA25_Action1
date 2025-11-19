@@ -46,7 +46,7 @@ public class PlayerAimShoot :   MonoBehaviour {
 
     
     if (facingLeft)
-        angle = Mathf.Atan2(lookDir.y, -lookDir.x) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2(lookDir.y, -lookDir.x) * Mathf.Rad2Deg * -1;
 
     
     shoulderFront.rotation = Quaternion.Euler(0, 0, angle);
