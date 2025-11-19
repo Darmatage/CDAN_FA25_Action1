@@ -9,7 +9,7 @@ public class PlayerAim :   MonoBehaviour {
       private Camera cam;
       //public Vector2 movement;
       public Vector2 mousePos;
-      public Transform fireBase;
+      //public Transform fireBase;
 
 	public Transform shoulderFront;
 	public Transform shoulderBack;
