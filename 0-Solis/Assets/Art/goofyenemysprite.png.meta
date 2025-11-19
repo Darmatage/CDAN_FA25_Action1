@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      goofyenemysprite_0: 5633386746890471851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

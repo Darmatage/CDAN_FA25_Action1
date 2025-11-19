@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerMoveAimShoot : MonoBehaviour{
+public class PlayerAttackShoot : MonoBehaviour{
 
       //public Animator animator;
       public float moveSpeed = 5f;
@@ -27,8 +27,8 @@ public class PlayerMoveAimShoot : MonoBehaviour{
       }
 
       void Update(){
-           movement.x = Input.GetAxisRaw("Horizontal");
-           movement.y = Input.GetAxisRaw("Vertical");
+           //movement.x = Input.GetAxisRaw("Horizontal");
+           //movement.y = Input.GetAxisRaw("Vertical");
            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
            if (Time.time >= nextAttackTime){
@@ -43,7 +43,7 @@ public class PlayerMoveAimShoot : MonoBehaviour{
 
       void FixedUpdate(){
             //actual movement uses Rigidbody2D, so goes in FixedUpdate:
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
             Vector2 lookDir = mousePos - rb.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
@@ -54,7 +54,7 @@ public class PlayerMoveAimShoot : MonoBehaviour{
       void playerFire(){
             //animator.SetTrigger ("Fire");
             //Vector2 fwd = (firePoint.position - this.transform.position).normalized;
-			Vector2 fwd = (firePoint.position - fireBaseBase.position).normalized;
+			Vector2 fwd = (firePoint.position - transform.position).normalized;
 
             /*
             //MUZZLEFLASH:

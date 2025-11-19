@@ -12,11 +12,11 @@ public class PlayerBetterFall : MonoBehaviour {
             rb = GetComponent <Rigidbody2D> ();
       }
 
-      void Update(){
+      void FixedUpdate(){
             if (rb.linearVelocity.y < 0) {
-                  rb.linearVelocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+                  rb.linearVelocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
             } else if (rb.linearVelocity.y > 0 && !Input.GetButton ("Jump")){
-                  rb.linearVelocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                  rb.linearVelocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
             }
       }
 }

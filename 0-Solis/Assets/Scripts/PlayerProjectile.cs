@@ -22,13 +22,16 @@ public class PlayerProjectile : MonoBehaviour{
                   //gameHandlerObj.playerGetHit(damage);
               //    other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);
             //}
-           if (other.gameObject.tag != "Player") {
+           if ((other.gameObject.tag != "Player") && (other.gameObject.tag != "Player_torso")) {
+				Debug.Log("I hit something: " + other.gameObject.name);
                   gameObject.GetComponent<BoxCollider2D>().enabled = false;
                   GameObject animEffect = Instantiate (hitEffectAnim, transform.position, Quaternion.identity);
                   projectileArt.SetActive(false);
                   //Destroy (animEffect, 0.5);
                   StartCoroutine(SelfDestructHit(animEffect));
             }
+
+			
       }
 
       IEnumerator SelfDestructHit(GameObject VFX){
