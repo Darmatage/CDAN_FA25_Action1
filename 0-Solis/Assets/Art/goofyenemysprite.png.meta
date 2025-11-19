@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e1c32f702cbbe642a309391f82f4af3
+guid: ce3a3c6b3754f0d4fb0df79a0a21c1f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8446094890007806000
-    second: TilemapBuildingFloor_0
+      213: 5633386746890471851
+    second: goofyenemysprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilemapBuildingFloor_0
+      name: goofyenemysprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 4
+        y: 50
+        width: 175
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 030482a9d8e863570800000000000000
-      internalID: 8446094890007806000
+      spriteID: ba9ccca366fcd2e40800000000000000
+      internalID: 5633386746890471851
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      TilemapBuildingFloor_0: 8446094890007806000
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
