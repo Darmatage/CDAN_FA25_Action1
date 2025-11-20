@@ -12,7 +12,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       public Vector2 mousePos;
       public Transform fireBase;
       public Transform firePoint;
-	public Transform fireBaseBase;
+	
      
       public GameObject projectilePrefab;
       public float projectileSpeed = 10f;
@@ -52,7 +52,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       }
 
       void playerFire(){
-            animator.SetTrigger ("Fire");
+            animator.SetTrigger("Fire");
             //Vector2 fwd = (firePoint.position - this.transform.position).normalized;
 			Vector2 fwd = (firePoint.position - transform.position).normalized;
 
