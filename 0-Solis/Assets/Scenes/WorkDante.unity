@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 418131869}
+    - target: {fileID: 4472539227014535537, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: Glow
+      value: 
+      objectReference: {fileID: 1801070479}
     - target: {fileID: 5104519994249240565, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: m_Name
       value: PlayerandCamera
@@ -490,9 +494,9 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.864
+  m_FalloffIntensity: 0.818
   m_Color: {r: 0.4764151, g: 1, b: 0.9524014, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1.03
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -516,7 +520,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 4.44
+  m_PointLightOuterRadius: 3.62
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -833,8 +837,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.736
-  m_Color: {r: 0.99659926, g: 1, b: 0.75, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.99697816, g: 1, b: 0.8066038, a: 1}
+  m_Intensity: 3.5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -857,8 +861,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 33.157894
   m_PointLightOuterAngle: 71.052605
-  m_PointLightInnerRadius: 5.07
-  m_PointLightOuterRadius: 11.78
+  m_PointLightInnerRadius: 0.3
+  m_PointLightOuterRadius: 9.49
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

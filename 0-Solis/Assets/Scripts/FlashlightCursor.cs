@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections;
+
 using UnityEngine;
 
 public class FlashlightCursor : MonoBehaviour
@@ -14,6 +15,7 @@ public class FlashlightCursor : MonoBehaviour
 	public float rotationSpeed = 30;
        public float distance = 50;
        public LineRenderer lineOfSight;
+	   public UnityEngine.Rendering.Universal.Light2D Glow;
        public Gradient redColor;
        public Gradient greenColor;
        //public GameObject hitEffectAnim;
@@ -27,6 +29,7 @@ public class FlashlightCursor : MonoBehaviour
 		distanceMultiplier = distanceMultiplierStart;
 		Physics2D.queriesStartInColliders = false;
 		lineOfSight.gameObject.SetActive(false);
+		Glow.gameObject.SetActive(false);
     }
 
 
@@ -50,6 +53,7 @@ public class FlashlightCursor : MonoBehaviour
 		RaycastHit2D hitInfo = Physics2D.Raycast (flashlight.position, direction, distance);
 	if (lightsOn){	
 		lineOfSight.gameObject.SetActive(true);
+		Glow.gameObject.SetActive(true);
 		if (hitInfo.collider != null) {
 			Debug.DrawLine(flashlight.position, hitInfo.point, Color.red);
 			lineOfSight.SetPosition(1, hitInfo.point); // index 1 is the end-point of the line
@@ -71,6 +75,7 @@ public class FlashlightCursor : MonoBehaviour
 	else
 		{
 			lineOfSight.gameObject.SetActive(false);
+			Glow.gameObject.SetActive(false);
 		}  
 	   
 	}
