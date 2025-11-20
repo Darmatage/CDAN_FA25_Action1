@@ -1,88 +1,100 @@
 fileFormatVersion: 2
-guid: d9789d7a7e8505041bb1c8c49974516c
+guid: 7c490d45fd0caa241a35f4a8ffababed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6532221654081681961
-    second: BloodSplatter_0
+      213: -7903305167799228511
+    second: BloodSplatter (1)_0
   - first:
-      213: 3639292250649052659
-    second: BloodSplatter_1
+      213: 4840486225589792365
+    second: BloodSplatter (1)_1
   - first:
-      213: 3293401116247901493
-    second: BloodSplatter_2
+      213: 8482470897852087387
+    second: BloodSplatter (1)_2
   - first:
-      213: -2267781128783977026
-    second: BloodSplatter_3
+      213: -4067624373286258510
+    second: BloodSplatter (1)_3
   - first:
-      213: -8871275040359352725
-    second: BloodSplatter_4
+      213: 8529882588578204799
+    second: BloodSplatter (1)_4
   - first:
-      213: 2115885345773684170
-    second: BloodSplatter_5
+      213: -5875299461231937589
+    second: BloodSplatter (1)_5
   - first:
-      213: 4029807344959321061
-    second: BloodSplatter_6
+      213: 997157515005657817
+    second: BloodSplatter (1)_6
   - first:
-      213: -8315371347672918084
-    second: BloodSplatter_7
+      213: 5146475707719848301
+    second: BloodSplatter (1)_7
   - first:
-      213: 352490669687561702
-    second: BloodSplatter_8
+      213: -3883484981065694765
+    second: BloodSplatter (1)_8
   - first:
-      213: -6992213443772709245
-    second: BloodSplatter_9
+      213: -354863887034684353
+    second: BloodSplatter (1)_9
   - first:
-      213: 8215572825122889226
-    second: BloodSplatter_10
+      213: -8182864205040629845
+    second: BloodSplatter (1)_10
   - first:
-      213: 3517521724334305678
-    second: BloodSplatter_11
+      213: -115408162692015930
+    second: BloodSplatter (1)_11
   - first:
-      213: 1393823735597956954
-    second: BloodSplatter_12
+      213: 8001558117408332174
+    second: BloodSplatter (1)_12
   - first:
-      213: -845433952727186199
-    second: BloodSplatter_13
+      213: -7048355059580275875
+    second: BloodSplatter (1)_13
   - first:
-      213: 3485750425396909205
-    second: BloodSplatter_14
+      213: 5045879102863923799
+    second: BloodSplatter (1)_14
   - first:
-      213: -465918841511404861
-    second: BloodSplatter_15
+      213: -7863052028464422479
+    second: BloodSplatter (1)_15
   - first:
-      213: -791396205191836747
-    second: BloodSplatter_16
+      213: 3442123993373665602
+    second: BloodSplatter (1)_16
   - first:
-      213: -4998915690971743731
-    second: BloodSplatter_17
+      213: 8027035160047180092
+    second: BloodSplatter (1)_17
   - first:
-      213: 3018976658990843445
-    second: BloodSplatter_18
+      213: -8074448274331103022
+    second: BloodSplatter (1)_18
   - first:
-      213: 1615298892172176941
-    second: BloodSplatter_19
+      213: -9007284400221416549
+    second: BloodSplatter (1)_19
   - first:
-      213: 4937499279170965189
-    second: BloodSplatter_20
+      213: -1417681255389138237
+    second: BloodSplatter (1)_20
   - first:
-      213: -3596605102340713591
-    second: BloodSplatter_21
+      213: 8499883399114893464
+    second: BloodSplatter (1)_21
   - first:
-      213: -5150681384982790160
-    second: BloodSplatter_22
+      213: -4679971565387409650
+    second: BloodSplatter (1)_22
   - first:
-      213: -1117678396053800214
-    second: BloodSplatter_23
+      213: -2469441424671992558
+    second: BloodSplatter (1)_23
   - first:
-      213: 4180793057428594459
-    second: BloodSplatter_24
+      213: 7467671854268531872
+    second: BloodSplatter (1)_24
   - first:
-      213: -5159548176135242389
-    second: BloodSplatter_25
+      213: -3771470967108144185
+    second: BloodSplatter (1)_25
   - first:
-      213: 9197476056462356906
-    second: BloodSplatter_26
+      213: -2448974091927480181
+    second: BloodSplatter (1)_26
+  - first:
+      213: -1916144644766917345
+    second: BloodSplatter (1)_27
+  - first:
+      213: -1221220003051931832
+    second: BloodSplatter (1)_28
+  - first:
+      213: 1500581592291729967
+    second: BloodSplatter (1)_29
+  - first:
+      213: 8157853848093244284
+    second: BloodSplatter (1)_30
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -195,9 +207,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c37767a2a966d5468d349bc5574f536
-      internalID: -900541785
+      spriteID: fc9cac1ff2d172a4f83b66bfe0343a98
+      internalID: 1120622233
       vertices: []
       indices: 
       edges: []
@@ -216,10 +228,10 @@ TextureImporter:
       name: BloodSplatter_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474207213e39c0449c9f6b8d58d64ff
-      internalID: -375297628
+      spriteID: 3bedf9b69efb74247b016b47e035b06b
+      internalID: -387904493
       vertices: []
       indices: 
       edges: []
@@ -240,8 +252,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +262,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b27af6838bee0394f818ddb882f116cc
-      internalID: 1321912828
+      spriteID: 85f23c4a82d784142b14e7fe2379ed1d
+      internalID: 1217793288
       vertices: []
       indices: 
       edges: []
@@ -260,10 +272,10 @@ TextureImporter:
       name: BloodSplatter_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b607c4e62f2494693fec4066fa61ff
-      internalID: 1705505119
+      spriteID: 92313d6609044fc4793d6e2910d34d67
+      internalID: 1838210655
       vertices: []
       indices: 
       edges: []
@@ -282,7 +294,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 38a02124d1a94e04988f83c0452d1bf3
+    spriteID: 5965c8c3278ad3044a84744c7be98a62
     internalID: 0
     vertices: []
     indices: 
@@ -292,10 +304,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BloodSplatter_0: -900541785
-      BloodSplatter_1: -375297628
-      BloodSplatter_2: 1321912828
-      BloodSplatter_3: 1705505119
+      BloodSplatter_0: 1120622233
+      BloodSplatter_1: -387904493
+      BloodSplatter_2: 1217793288
+      BloodSplatter_3: 1838210655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
