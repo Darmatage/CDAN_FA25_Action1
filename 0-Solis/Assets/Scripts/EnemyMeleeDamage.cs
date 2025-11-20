@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMeleeDamage : MonoBehaviour {
        private Renderer rend;
-       public Animator anim;
+       private Animator anim;
        public GameObject healthLoot;
        public int maxHealth = 100;
        public int currentHealth;
@@ -27,7 +27,7 @@ public class EnemyMeleeDamage : MonoBehaviour {
 
        void Die(){
               Instantiate (healthLoot, transform.position, Quaternion.identity);
-              //anim.SetBool ("isDead", true);
+              anim.SetBool ("isDead", true);
               GetComponent<Collider2D>().enabled = false;
               StartCoroutine(Death());
        }
