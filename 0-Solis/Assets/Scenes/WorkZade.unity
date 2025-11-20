@@ -495,7 +495,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 456786355908866760, guid: 390558862b8cc0b428f76ade9a944b8a, type: 3}
       propertyPath: m_Name
-      value: BasicEnemy01
+      value: Enemy01
+      objectReference: {fileID: 0}
+    - target: {fileID: 456786355908866760, guid: 390558862b8cc0b428f76ade9a944b8a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2451857818779974613, guid: 390558862b8cc0b428f76ade9a944b8a, type: 3}
       propertyPath: m_LocalPosition.x

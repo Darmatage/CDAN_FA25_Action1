@@ -747,7 +747,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TilemapBuildingBackround_0: -4884767072021441326
+      TilemapBuildingBackround_1: 8841392801483961731
+      TilemapBuildingBackround_10: 7852354971785856484
+      TilemapBuildingBackround_11: -2931130900790748807
+      TilemapBuildingBackround_12: -5942265822259652925
+      TilemapBuildingBackround_13: 6232533756643377
+      TilemapBuildingBackround_14: -6126631383946418839
+      TilemapBuildingBackround_15: 4840127584265764068
+      TilemapBuildingBackround_16: 5764441692717521866
+      TilemapBuildingBackround_17: -6985619405232977823
+      TilemapBuildingBackround_18: -2793278076417367979
+      TilemapBuildingBackround_19: 245509291218186125
+      TilemapBuildingBackround_2: 1926501639571390701
+      TilemapBuildingBackround_20: -5398598457205443676
+      TilemapBuildingBackround_21: -5299392217892296654
+      TilemapBuildingBackround_22: -7779850896168834301
+      TilemapBuildingBackround_23: -6418172698120434809
+      TilemapBuildingBackround_24: 4302104234407067478
+      TilemapBuildingBackround_3: -1128971417385533721
+      TilemapBuildingBackround_4: 2848111771914524644
+      TilemapBuildingBackround_5: -4846044101837444093
+      TilemapBuildingBackround_6: -5599948684208829519
+      TilemapBuildingBackround_7: -6840152941848394231
+      TilemapBuildingBackround_8: -3585351831433044778
+      TilemapBuildingBackround_9: -3297199277836991740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
