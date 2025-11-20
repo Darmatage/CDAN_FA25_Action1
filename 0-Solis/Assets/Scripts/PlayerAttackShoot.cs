@@ -21,7 +21,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       //public GameObject muzzleFlash;
 
       void Start(){
-           animator = gameObject.GetComponentInChildren<Animator>();
+           //animator = gameObject.GetComponentInChildren<Animator>();
            rb = GetComponent<Rigidbody2D>();
            cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>() as Camera;
       }
