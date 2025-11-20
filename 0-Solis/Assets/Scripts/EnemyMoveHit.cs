@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyMoveHit : MonoBehaviour {
 
-       public Animator anim;
-       public Rigidbody2D rb2D;
+       private Animator anim;
+       private Rigidbody2D rb2D;
        public float speed = 4f;
        private Transform target;
        public int damage = 10;
@@ -16,6 +16,8 @@ public class EnemyMoveHit : MonoBehaviour {
        public float attackRange = 10;
        public bool isAttacking = false;
        private float scaleX;
+
+       public GameObject bloodSplatter;
 
        void Start () {
               anim = GetComponentInChildren<Animator> ();
@@ -36,7 +38,7 @@ public class EnemyMoveHit : MonoBehaviour {
 
               if ((target != null) && (DistToPlayer <= attackRange)){
                      transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-                    //anim.SetBool("Walk", true);
+                    anim.SetBool("Walk", true);
                     //flip enemy to face player direction. Wrong direction? Swap the * -1.
                     if (target.position.x > gameObject.transform.position.x){
                                    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
@@ -44,21 +46,22 @@ public class EnemyMoveHit : MonoBehaviour {
                                     gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
                     }
               }
-               //else { anim.SetBool("Walk", false);}
+               else { anim.SetBool("Walk", false);}
        }
 
        public void OnCollisionEnter2D(Collision2D other){
               if (other.gameObject.tag == "Player") {
                      isAttacking = true;
-                     //anim.SetBool("Attack", true);
+                     anim.SetBool("Bite", true);
                      gameHandler.playerGetHit(damage);
+                     Instantiate(bloodSplatter, other.gameObject.transform.position, Quaternion.identity);
               }
        }
 
        public void OnCollisionExit2D(Collision2D other){
               if (other.gameObject.tag == "Player") {
                      isAttacking = false;
-                     //anim.SetBool("Attack", false);
+                     anim.SetBool("Bite", false);
               }
        }
 
