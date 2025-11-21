@@ -8,6 +8,7 @@ TagManager:
   - PauseMenuSlider
   - Player_torso
   - Enemy
+  - door
   layers:
   - Default
   - TransparentFX
