@@ -9,6 +9,7 @@ TagManager:
   - Player_torso
   - Enemy
   - door
+  - Battery
   layers:
   - Default
   - TransparentFX

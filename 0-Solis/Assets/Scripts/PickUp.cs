@@ -15,11 +15,30 @@ public class PickUp : MonoBehaviour{
       public float speedTime = 2f;
       //public int tokenBoost = 20;
 
+	bool canPickUp = false;
+	public GameObject MSG_PressE;
+
+
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
+			MSG_PressE.SetActive(false);
       }
 
+	void Update()
+	{
+		if (canPickUp && Input.GetKeyDown("e"))
+		{
+			//GetComponent< AudioSource>().Play();
+			StartCoroutine(DestroyThis());
+			if (isTokenPickUp == true) {
+				GameHandler.GainTokens(20);
+				//playerPowerupVFX.powerup();
+			}
+		}
+	}
+
+/*
       public void OnTriggerEnter2D (Collider2D other){
             if (other.gameObject.tag == "Player"){
                   GetComponent<Collider2D>().enabled = false;
@@ -41,10 +60,21 @@ public class PickUp : MonoBehaviour{
                    }     
             }
       }
-
+*/
       IEnumerator DestroyThis(){
             yield return new WaitForSeconds(0.3f);
             Destroy(gameObject);
       }
+
+	public void enableBatteryForPickup()
+	{
+		canPickUp = true;
+		MSG_PressE.SetActive(true);
+	}
+
+	public void disableBatteryPickup(){
+		canPickUp = false;
+		MSG_PressE.SetActive(false);
+	}
 
 }

@@ -14066,6 +14066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAMEHANDLER_CANVAS
       objectReference: {fileID: 0}
+    - target: {fileID: 2455096336286241135, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8925356599598111319, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -14173,12 +14177,12 @@ GameObject:
   - component: {fileID: 2145136737}
   - component: {fileID: 2145136736}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Light 2D global FOR TESTING
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2145136736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14260,7 +14264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177054356915566053, guid: 2bceef5af71519f41b37e479cf64e312, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.23
+      value: -3.08
       objectReference: {fileID: 0}
     - target: {fileID: 3177054356915566053, guid: 2bceef5af71519f41b37e479cf64e312, type: 3}
       propertyPath: m_LocalPosition.z

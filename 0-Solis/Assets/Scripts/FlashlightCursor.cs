@@ -21,6 +21,9 @@ public class FlashlightCursor : MonoBehaviour
    
     private float energyTimer = 0f;
 
+	//batteries:
+	GameObject lastBattery;
+
     void Start()
     {
         distanceMultiplier = distanceMultiplierStart;
@@ -89,10 +92,25 @@ public class FlashlightCursor : MonoBehaviour
                 lineOfSight.SetPosition(1, hitInfo.point);
                 lineOfSight.colorGradient = redColor;
 
+				if (hitInfo.collider.CompareTag("Battery"))
+                {
+					lastBattery = hitInfo.collider.gameObject;
+                    Debug.Log("I hit a battery: " + hitInfo.collider.gameObject.name);
+					hitInfo.collider.gameObject.GetComponent<PickUp>().enableBatteryForPickup();
+                }
+				else
+				{
+					if (lastBattery != null)
+					{
+						lastBattery.GetComponent<PickUp>().disableBatteryPickup();
+					}
+				}
+
                 if (hitInfo.collider.CompareTag("Enemy"))
                 {
                     Debug.Log("I hit an enemy: " + hitInfo.collider.gameObject.name);
                 }
+
             }
             else
             {
