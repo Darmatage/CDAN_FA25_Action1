@@ -35,18 +35,18 @@ public class PlayerAttackShoot : MonoBehaviour{
 {
         if (Input.GetAxis("Attack") > 0)
         {
-            // 🔥 Check if enough tokens before firing
+            
             if (GameHandler.gotTokens >= 10)
             {
                 playerFire();
                 nextAttackTime = Time.time + 1f / attackRate;
 
-                // Spend tokens
+                
                 GameHandler.SpendTokens(10);
             }
             else
             {
-                // Optional feedback
+               
                 Debug.Log("Not enough tokens to shoot!");
             }
             }
@@ -55,12 +55,11 @@ public class PlayerAttackShoot : MonoBehaviour{
 
 
       void FixedUpdate(){
-            //actual movement uses Rigidbody2D, so goes in FixedUpdate:
-            //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+           
 
             Vector2 lookDir = mousePos - rb.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-            //rb.rotation = angle;
+            
             fireBase.transform.eulerAngles = new Vector3(0, 0, angle);
       }
 

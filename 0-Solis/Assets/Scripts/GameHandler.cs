@@ -65,6 +65,10 @@ public class GameHandler : MonoBehaviour {
       gotTokens = Mathf.Max(0, gotTokens - amount);    // prevent negatives
       FindObjectOfType<GameHandler>().updateStatsDisplay();
       }
+      public static void GainTokens(int amount){
+      gotTokens = Mathf.Min(100, gotTokens + amount);    // prevent over 100
+      FindObjectOfType<GameHandler>().updateStatsDisplay();
+      }
 
       public void updateStatsDisplay(){
             healthText.text = "HEALTH: " + playerHealth;

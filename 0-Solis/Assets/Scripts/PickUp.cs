@@ -6,12 +6,14 @@ public class PickUp : MonoBehaviour{
 
       public GameHandler gameHandler;
       //public playerVFX playerPowerupVFX;
-      public bool isHealthPickUp = true;
+      public bool isHealthPickUp = false;
       public bool isSpeedBoostPickUp = false;
+      public bool isTokenPickUp = true;
 
       public int healthBoost = 50;
       public float speedBoost = 2f;
       public float speedTime = 2f;
+      //public int tokenBoost = 20;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -33,6 +35,10 @@ public class PickUp : MonoBehaviour{
                         //other.gameObject.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
                         //playerPowerupVFX.powerup();
                   //}
+                   if (isTokenPickUp == true) {
+                        GameHandler.GainTokens(20);
+                        //playerPowerupVFX.powerup();
+                   }     
             }
       }
 
