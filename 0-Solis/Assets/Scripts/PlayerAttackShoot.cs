@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttackShoot : MonoBehaviour{
 
       public Animator animator;
+      public Animator chargeanimator;
       public float moveSpeed = 5f;
       private Rigidbody2D rb;
       public Camera cam;
@@ -53,6 +54,7 @@ public class PlayerAttackShoot : MonoBehaviour{
 
       void playerFire(){
             animator.SetTrigger("Fire");
+            chargeanimator.SetTrigger("Fire");
             //Vector2 fwd = (firePoint.position - this.transform.position).normalized;
 			Vector2 fwd = (firePoint.position - transform.position).normalized;
 
