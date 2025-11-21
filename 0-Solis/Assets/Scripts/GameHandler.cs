@@ -13,7 +13,7 @@ public class GameHandler : MonoBehaviour {
       public int StartPlayerHealth = 100;
       public TMP_Text healthText;
 
-      public static int gotTokens = 0;
+      public static int gotTokens = 100;
       public TMP_Text tokensText;
 
       public bool isDefending = false;
@@ -60,6 +60,10 @@ public class GameHandler : MonoBehaviour {
                   updateStatsDisplay();
                   playerDies();
             }
+      }
+      public static void SpendTokens(int amount){
+      gotTokens = Mathf.Max(0, gotTokens - amount);    // prevent negatives
+      FindObjectOfType<GameHandler>().updateStatsDisplay();
       }
 
       public void updateStatsDisplay(){

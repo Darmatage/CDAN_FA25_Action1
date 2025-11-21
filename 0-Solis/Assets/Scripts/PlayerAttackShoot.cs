@@ -27,18 +27,30 @@ public class PlayerAttackShoot : MonoBehaviour{
            cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>() as Camera;
       }
 
-      void Update(){
-           //movement.x = Input.GetAxisRaw("Horizontal");
-           //movement.y = Input.GetAxisRaw("Vertical");
-           mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      void Update()
+{
+    mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-           if (Time.time >= nextAttackTime){
-                  //if (Input.GetKeyDown(KeyCode.Space))
-                 if (Input.GetAxis("Attack") > 0){
-                        playerFire();
-                        nextAttackTime = Time.time + 1f / attackRate;
-                  }
+    if (Time.time >= nextAttackTime)
+{
+        if (Input.GetAxis("Attack") > 0)
+        {
+            // 🔥 Check if enough tokens before firing
+            if (GameHandler.gotTokens >= 10)
+            {
+                playerFire();
+                nextAttackTime = Time.time + 1f / attackRate;
+
+                // Spend tokens
+                GameHandler.SpendTokens(10);
             }
+            else
+            {
+                // Optional feedback
+                Debug.Log("Not enough tokens to shoot!");
+            }
+            }
+       }
       }
 
 
@@ -55,6 +67,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       void playerFire(){
             animator.SetTrigger("Fire");
             chargeanimator.SetTrigger("Fire");
+            
             //Vector2 fwd = (firePoint.position - this.transform.position).normalized;
 			Vector2 fwd = (firePoint.position - transform.position).normalized;
 
