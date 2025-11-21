@@ -6,6 +6,9 @@ public class PlayerHurt: MonoBehaviour {
 
       //public Animator animator;
       public Rigidbody2D rb2D;
+      public AudioSource audioSource;
+
+        public AudioSource[] hurtSources;
 
       void Start(){
            //animator = gameObject.GetComponentInChildren<Animator>();
@@ -14,6 +17,12 @@ public class PlayerHurt: MonoBehaviour {
 
       public void playerHit(){
             //animator.SetTrigger ("GetHurt");
+      if (hurtSources.Length > 0)
+        {
+            int index = Random.Range(0, hurtSources.Length);
+            hurtSources[index].Play();
+        }
+    
       }
 
       public void playerDead(){

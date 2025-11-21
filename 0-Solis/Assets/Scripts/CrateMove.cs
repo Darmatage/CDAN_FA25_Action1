@@ -20,7 +20,7 @@ public class CrateMove : MonoBehaviour {
 	void Update()
 	{
 
-		if (Input.GetKeyDown("p")){
+		if (Input.GetKeyDown("e")){
 			if (isTouchingPlayer && fixedJoint == null){
 				jointNode.position = thePlayer.transform.position;
 				jointNode.parent = thePlayer.transform;
@@ -57,7 +57,7 @@ public class CrateMove : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			Debug.Log("Hit [p] to pull");
+			Debug.Log("Hit [E] to pull");
 			isTouchingPlayer = true;
 			thePlayer = other.gameObject;
 		}
