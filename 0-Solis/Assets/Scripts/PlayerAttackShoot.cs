@@ -37,7 +37,7 @@ public class PlayerAttackShoot : MonoBehaviour
         {
             if (Input.GetAxis("Attack") > 0)
             {
-                if (GameHandler.gotTokens >= 10)
+                if (GameHandler.gotTokens > 0)
                 {
                     playerFire();
                     nextAttackTime = Time.time + 1f / attackRate;

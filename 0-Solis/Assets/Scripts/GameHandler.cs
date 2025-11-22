@@ -24,6 +24,17 @@ public class GameHandler : MonoBehaviour {
       private string sceneName;
       public static string lastLevelDied;  //allows replaying the Level where you died
 
+      // Battery meter images (9 public slots)
+      public Image battery0;   // 0-11%
+      public Image battery1;   // 12-23%
+      public Image battery2;   // 24-34%
+      public Image battery3;   // 35-45%
+      public Image battery4;   // 46-56%
+      public Image battery5;   // 57-67%
+      public Image battery6;   // 68-78%
+      public Image battery7;   // 79-89%
+      public Image battery8;   // 90-100%
+
       void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
@@ -73,6 +84,29 @@ public class GameHandler : MonoBehaviour {
       public void updateStatsDisplay(){
             healthText.text = "HEALTH: " + playerHealth;
             tokensText.text = "ENERGY: " + gotTokens;
+
+            // Update battery meter images based on gotTokens
+            battery0.enabled = battery1.enabled = battery2.enabled = battery3.enabled = battery4.enabled =
+            battery5.enabled = battery6.enabled = battery7.enabled = battery8.enabled = false;
+
+            if (gotTokens <= 11)
+                  battery0.enabled = true;
+            else if (gotTokens <= 23)
+                  battery1.enabled = true;
+            else if (gotTokens <= 34)
+                  battery2.enabled = true;
+            else if (gotTokens <= 45)
+                  battery3.enabled = true;
+            else if (gotTokens <= 56)
+                  battery4.enabled = true;
+            else if (gotTokens <= 67)
+                  battery5.enabled = true;
+            else if (gotTokens <= 78)
+                  battery6.enabled = true;
+            else if (gotTokens <= 89)
+                  battery7.enabled = true;
+            else
+                  battery8.enabled = true;
       }
 
       public void playerDies(){
