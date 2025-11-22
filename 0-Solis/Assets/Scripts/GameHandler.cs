@@ -12,22 +12,6 @@ public class GameHandler : MonoBehaviour
     public int StartPlayerHealth = 100;
     public TMP_Text healthText;
 
-    public AudioClip zeroEnergyClip;
-    public AudioClip breathingClip;
-    public float breathingClipMinPitch = 0.8f;
-    public float breathingClipPitch = 1.2f;
-    public float zeroEnergyMinPitch = 0.8f;
-    public float zeroEnergyMaxPitch = 1.2f;
-
-    public AudioSource levelAudioSource;
-    //public AudioClip levelStartClip;      
-    //public float minPitch = 0.8f;         
-    //public float maxPitch = 1.2f;
-
-    public bool[] playZeroEnergyAudioPerPhase = new bool[10];
-    public bool[] playbreathingAudioPerPhase = new bool[10];  
-    // assign in Inspector: true/false for each zero-energy phase
-
     public static int gotTokens = 100;
     public TMP_Text tokensText;
 
@@ -50,9 +34,8 @@ public class GameHandler : MonoBehaviour
     public Image battery7; // 79-89%
     public Image battery8; // 90-100%
 
-    // --- New: Zero-energy phase images (10 phases)
-    public Image[] zeroEnergyPhases = new Image[10];  // assign 10 images in inspector
-    private bool zeroEnergySequenceRunning = false;
+    // --- New: Reference to zero-energy UI effect
+    public GameHandlerZeroEnergy zeroEnergyUIEffect; // assign in inspector
 
     void Start()
     {
@@ -60,17 +43,6 @@ public class GameHandler : MonoBehaviour
         sceneName = SceneManager.GetActiveScene().name;
         //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
         playerHealth = StartPlayerHealth;
-
-        foreach (Image img in zeroEnergyPhases)
-        {
-            if (img != null)
-                img.enabled = false;
-
-            //if (levelAudioSource != null && levelStartClip != null){
-            //levelAudioSource.pitch = Random.Range(minPitch, maxPitch);
-            //levelAudioSource.PlayOneShot(levelStartClip);
-            //}
-        }
 
         updateStatsDisplay();
         //}
@@ -83,17 +55,9 @@ public class GameHandler : MonoBehaviour
         updateStatsDisplay();
 
         // Stop zero energy sequence if energy is regained
-        if (gotTokens > 0 && zeroEnergySequenceRunning)
+        if (gotTokens > 0 && zeroEnergyUIEffect != null)
         {
-            StopCoroutine("ZeroEnergySequence");
-            zeroEnergySequenceRunning = false;
-
-            // Hide all phase images
-            foreach (Image img in zeroEnergyPhases)
-            {
-                if (img != null)
-                    img.enabled = false;
-            }
+            zeroEnergyUIEffect.StopZeroEnergySequence();
         }
     }
 
@@ -168,66 +132,10 @@ public class GameHandler : MonoBehaviour
             battery8.enabled = true;
 
         // --- New: Trigger zero energy sequence ---
-        if (gotTokens <= 0 && !zeroEnergySequenceRunning)
+        if (gotTokens <= 0 && zeroEnergyUIEffect != null)
         {
-            StartCoroutine("ZeroEnergySequence");
+            zeroEnergyUIEffect.StartZeroEnergySequence();
         }
-    }
-
-    // --- New: Coroutine for 10-phase zero energy sequence ---
-    IEnumerator ZeroEnergySequence()
-    {
-        zeroEnergySequenceRunning = true;
-
-        for (int i = 0; i < zeroEnergyPhases.Length; i++)
-        {
-            // Hide all images first
-            foreach (Image img in zeroEnergyPhases)
-            {
-                if (img != null)
-                    img.enabled = false;
-            }
-
-            // Show the current phase image
-            if (zeroEnergyPhases[i] != null)
-                zeroEnergyPhases[i].enabled = true;
-
-            // Play audio for this phase using the existing levelAudioSource if the toggle for this phase is on
-            if (levelAudioSource != null && zeroEnergyClip != null)
-            {
-                if (playZeroEnergyAudioPerPhase.Length > i && playZeroEnergyAudioPerPhase[i])
-                {
-                    levelAudioSource.pitch = Random.Range(zeroEnergyMinPitch, zeroEnergyMaxPitch);
-                    levelAudioSource.PlayOneShot(zeroEnergyClip);
-                }
-            }
-            if (levelAudioSource != null && breathingClip != null)
-            {
-                if (playbreathingAudioPerPhase.Length > i && playbreathingAudioPerPhase[i])
-                {
-                    levelAudioSource.pitch = Random.Range(breathingClipMinPitch, breathingClipPitch);
-                    levelAudioSource.PlayOneShot(breathingClip);
-                }
-            }
-
-            yield return new WaitForSeconds(2f);
-
-            // Stop if energy regained
-            if (gotTokens > 0)
-            {
-                zeroEnergySequenceRunning = false;
-                foreach (Image img in zeroEnergyPhases)
-                {
-                    if (img != null)
-                        img.enabled = false;
-                }
-                yield break;
-            }
-        }
-
-        // After last phase, player dies
-        zeroEnergySequenceRunning = false;
-        playerDies();
     }
 
     public void playerDies()
