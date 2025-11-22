@@ -8,7 +8,6 @@ public class FlashlightCursor : MonoBehaviour
     public static float distanceMultiplier;
     public float distanceMultiplierStart = 6;
 
-    
     public float rotationSpeed = 30;
     public float distance = 50;
     public LineRenderer lineOfSight;
@@ -18,11 +17,14 @@ public class FlashlightCursor : MonoBehaviour
 
     bool lightsOn = false;
 
-   
     private float energyTimer = 0f;
 
-	//batteries:
-	GameObject lastBattery;
+    //batteries:
+    GameObject lastBattery;
+
+    // AudioSources for flashlight on/off
+    public AudioSource flashlightOnSound;
+    public AudioSource flashlightOffSound;
 
     void Start()
     {
@@ -34,10 +36,8 @@ public class FlashlightCursor : MonoBehaviour
 
     void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.F))
         {
-           
             if (!lightsOn && GameHandler.gotTokens <= 0)
             {
                 Debug.Log("Not enough energy to turn on the flashlight!");
@@ -45,10 +45,19 @@ public class FlashlightCursor : MonoBehaviour
             else
             {
                 lightsOn = !lightsOn;
+
+                // Play the appropriate sound
+                if (lightsOn)
+                {
+                    if (flashlightOnSound != null) flashlightOnSound.Play();
+                }
+                else
+                {
+                    if (flashlightOffSound != null) flashlightOffSound.Play();
+                }
             }
         }
 
-       
         if (lightsOn)
         {
             energyTimer += Time.deltaTime;
@@ -57,24 +66,23 @@ public class FlashlightCursor : MonoBehaviour
             {
                 energyTimer = 0f;
 
-               
                 if (GameHandler.gotTokens > 0)
                 {
                     GameHandler.SpendTokens(1);
                 }
                 else
                 {
-                    
                     lightsOn = false;
                     lineOfSight.gameObject.SetActive(false);
                     Glow.gameObject.SetActive(false);
+
+                    if (flashlightOffSound != null) flashlightOffSound.Play();
 
                     Debug.Log("Flashlight turned off — no energy left!");
                 }
             }
         }
 
-      
         Vector2 direction = (flashlight.position - transform.position).normalized;
         Vector3 offsetVector = direction * distanceMultiplier;
         Vector2 lightDistance = flashlight.position + offsetVector;
@@ -92,25 +100,24 @@ public class FlashlightCursor : MonoBehaviour
                 lineOfSight.SetPosition(1, hitInfo.point);
                 lineOfSight.colorGradient = redColor;
 
-				if (hitInfo.collider.CompareTag("Battery"))
+                if (hitInfo.collider.CompareTag("Battery"))
                 {
-					lastBattery = hitInfo.collider.gameObject;
+                    lastBattery = hitInfo.collider.gameObject;
                     Debug.Log("I hit a battery: " + hitInfo.collider.gameObject.name);
-					hitInfo.collider.gameObject.GetComponent<PickUp>().enableBatteryForPickup();
+                    hitInfo.collider.gameObject.GetComponent<PickUp>().enableBatteryForPickup();
                 }
-				else
-				{
-					if (lastBattery != null)
-					{
-						lastBattery.GetComponent<PickUp>().disableBatteryPickup();
-					}
-				}
+                else
+                {
+                    if (lastBattery != null)
+                    {
+                        lastBattery.GetComponent<PickUp>().disableBatteryPickup();
+                    }
+                }
 
                 if (hitInfo.collider.CompareTag("Enemy"))
                 {
                     Debug.Log("I hit an enemy: " + hitInfo.collider.gameObject.name);
                 }
-
             }
             else
             {

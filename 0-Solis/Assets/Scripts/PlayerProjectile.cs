@@ -11,6 +11,9 @@ public class PlayerProjectile : MonoBehaviour{
       public GameObject projectileArt;
       public GameObject splatterPrefab;
 
+      // Audio clip for hit sound
+      public AudioSource hitSound;
+
       void Start(){
            //projectileArt = GetComponentInChildren<SpriteRenderer>();
            StartCoroutine(SelfDestruct());
@@ -25,13 +28,18 @@ public class PlayerProjectile : MonoBehaviour{
            if ((other.gameObject.tag != "Player") && (other.gameObject.tag != "Player_torso")) {
 				Debug.Log("I hit something: " + other.gameObject.name);
                   gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                  // Play hit sound at the projectile's position
+                  if (hitSound != null)
+                  {
+                        AudioSource.PlayClipAtPoint(hitSound.clip, transform.position, hitSound.volume);
+                  }
+
                   GameObject animEffect = Instantiate (hitEffectAnim, transform.position, Quaternion.identity);
                   projectileArt.SetActive(false);
                   //Destroy (animEffect, 0.5);
                   StartCoroutine(SelfDestructHit(animEffect));
-            }
-
-			
+            }		
       }
 
       IEnumerator SelfDestructHit(GameObject VFX){
@@ -45,6 +53,4 @@ public class PlayerProjectile : MonoBehaviour{
             yield return new WaitForSeconds(SelfDestructTime);
             Destroy (gameObject);
       }
-
-     
 }
