@@ -1810,7 +1810,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: d922ea06c24be6b4da2d6daf747ede49, type: 3}
   m_Resource: {fileID: 8300000, guid: d922ea06c24be6b4da2d6daf747ede49, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.753
+  m_Volume: 0.846
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5826,75 +5826,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phases:
   - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
+    showOverlayTrio: 1
     playZeroEnergyAudio: 0
     playBreathingAudio: 0
-    playAlarmAudio: 0
+    playAlarmAudio: 1
   - phaseImage: {fileID: 0}
     showOverlayTrio: 0
     playZeroEnergyAudio: 0
+    playBreathingAudio: 1
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 5287010191575300443}
+    showOverlayTrio: 0
+    playZeroEnergyAudio: 1
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 5287010191575300443}
     showOverlayTrio: 0
     playZeroEnergyAudio: 0
+    playBreathingAudio: 1
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 1806584159577373409}
+    showOverlayTrio: 1
+    playZeroEnergyAudio: 1
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 1806584159577373409}
     showOverlayTrio: 0
     playZeroEnergyAudio: 0
+    playBreathingAudio: 1
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 3905985639412765941}
+    showOverlayTrio: 0
+    playZeroEnergyAudio: 1
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 5926110273461188978}
     showOverlayTrio: 0
     playZeroEnergyAudio: 0
-    playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
+    playBreathingAudio: 1
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 5363732281991369371}
+    showOverlayTrio: 1
     playZeroEnergyAudio: 0
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 1580259936461657494}
+    showOverlayTrio: 1
     playZeroEnergyAudio: 0
+    playBreathingAudio: 1
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 406266983769374989}
+    showOverlayTrio: 1
+    playZeroEnergyAudio: 1
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 406266983769374989}
+    showOverlayTrio: 1
+    playZeroEnergyAudio: 1
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 9074416745856580123}
+    showOverlayTrio: 1
+    playZeroEnergyAudio: 1
+    playBreathingAudio: 1
+    playAlarmAudio: 1
+  - phaseImage: {fileID: 9074416745856580123}
+    showOverlayTrio: 1
+    playZeroEnergyAudio: 1
     playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
-    playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
-    playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
-    playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
-    playBreathingAudio: 0
-    playAlarmAudio: 0
-  - phaseImage: {fileID: 0}
-    showOverlayTrio: 0
-    playZeroEnergyAudio: 0
-    playBreathingAudio: 0
-    playAlarmAudio: 0
+    playAlarmAudio: 1
   sharedOverlayTrio:
     images:
     - {fileID: 7781866179815412712}
@@ -5914,10 +5914,10 @@ MonoBehaviour:
   breathingMinPitch: 1
   breathingMaxPitch: 1
   alarmMinPitch: 0.8
-  alarmMaxPitch: 1.2
-  fadeDuration: 0.3
-  displayDuration: 1.8
-  waitBetweenPhases: 2
+  alarmMaxPitch: 0.8
+  fadeDuration: 0.2
+  displayDuration: 1
+  waitBetweenPhases: 1
   startTemperature: 100
   endTemperature: -10
   fallSpeed: 50
