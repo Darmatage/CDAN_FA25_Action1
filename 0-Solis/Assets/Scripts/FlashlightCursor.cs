@@ -20,7 +20,12 @@ public class FlashlightCursor : MonoBehaviour
     private float energyTimer = 0f;
 
     //batteries:
-    GameObject lastBattery;
+    //GameObject lastBattery;
+
+	//batteries:
+    //GameObject lastEnemy;
+
+	public GameObject lastHitObject;
 
     // AudioSources for flashlight on/off
     public AudioSource flashlightOnSound;
@@ -83,23 +88,53 @@ public class FlashlightCursor : MonoBehaviour
             }
         }
 
+
+//FLASHLIGHT RAYCAST COLLISIONS:
         Vector2 direction = (flashlight.position - transform.position).normalized;
         Vector3 offsetVector = direction * distanceMultiplier;
         Vector2 lightDistance = flashlight.position + offsetVector;
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(flashlight.position, direction, distance);
+        RaycastHit2D hit = Physics2D.Raycast(flashlight.position, direction, distance);
 
         if (lightsOn)
         {
             lineOfSight.gameObject.SetActive(true);
             Glow.gameObject.SetActive(true);
 
-            if (hitInfo.collider != null)
+            if (hit.collider != null)
             {
-                Debug.DrawLine(flashlight.position, hitInfo.point, Color.red);
-                lineOfSight.SetPosition(1, hitInfo.point);
+                Debug.DrawLine(flashlight.position, hit.point, Color.red);
+                lineOfSight.SetPosition(1, hit.point);
                 lineOfSight.colorGradient = redColor;
 
+				//hit a new object? set old object to unlit:
+				if (hit.collider.gameObject != lastHitObject){
+					if (lastHitObject != null){
+						//Debug.Log("Ray exited: " + lastHitObject.name);
+						if (lastHitObject.CompareTag("Battery"))
+							{
+								lastHitObject.GetComponent<PickUp>().disableBatteryPickup();
+							}
+						if (lastHitObject.CompareTag("Enemy"))
+							{
+								lastHitObject.GetComponent<EnemyMeleeDamage>().Flash_Unlit();
+							}
+					}
+				}
+
+				//heck to see if newly hit object is a battery or an enemy  
+				lastHitObject = hit.collider.gameObject;
+				if (hit.collider.CompareTag("Battery"))
+					{
+						//Debug.Log("I hit a battery: " + hit.collider.gameObject.name);
+						hit.collider.gameObject.GetComponent<PickUp>().enableBatteryForPickup();
+					}
+				if (hit.collider.CompareTag("Enemy"))
+					{
+						//Debug.Log("I hit an Enemy: " + hit.collider.gameObject.name);
+						hit.collider.gameObject.GetComponent<EnemyMeleeDamage>().Flash_Lit();
+					}
+/*
                 if (hitInfo.collider.CompareTag("Battery"))
                 {
                     lastBattery = hitInfo.collider.gameObject;
@@ -116,14 +151,18 @@ public class FlashlightCursor : MonoBehaviour
 
                 if (hitInfo.collider.CompareTag("Enemy"))
                 {
+					lastEnemy = hitInfo.collider.gameObject;
                     Debug.Log("I hit an enemy: " + hitInfo.collider.gameObject.name);
+					hitInfo.collider.gameObject.GetComponent<EnemyMeleeDamage>().isFlashlit==true;
                 }
+*/
             }
             else
             {
                 Debug.DrawLine(flashlight.position, lightDistance, Color.green);
                 lineOfSight.SetPosition(1, lightDistance);
                 lineOfSight.colorGradient = greenColor;
+				lastHitObject = null; // Clear the reference
             }
 
             lineOfSight.SetPosition(0, flashlight.position);

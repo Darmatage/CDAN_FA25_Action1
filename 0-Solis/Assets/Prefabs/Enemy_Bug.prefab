@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8531696359267572712}
   - component: {fileID: 4014926457827152658}
   - component: {fileID: 2280884551146366792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Bug
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0774982, y: -0.15887143}
+  m_Offset: {x: -0.25633627, y: -0.49419165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0154996, y: 0.48851165}
+  m_Size: {x: 3.6309948, y: 2.9922342}
   m_EdgeRadius: 0
 --- !u!114 &4014926457827152658
 MonoBehaviour:
@@ -127,6 +127,7 @@ MonoBehaviour:
   attackRange: 10
   isAttacking: 0
   bloodSplatter: {fileID: 244500748440995492, guid: d17faf6e3e3f32243a5b766c70ba060c, type: 3}
+  retreatDistance: 12
 --- !u!114 &2280884551146366792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,8 +141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthLoot: {fileID: 244500748440995492, guid: d17faf6e3e3f32243a5b766c70ba060c, type: 3}
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
+  isFlashlit: 0
 --- !u!1 &4444486649608300369
 GameObject:
   m_ObjectHideFlags: 0

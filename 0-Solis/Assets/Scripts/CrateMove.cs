@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CrateMove : MonoBehaviour {
 
+	Rigidbody2D rb2D;
+
     [Header("Ground Check")]
     public LayerMask groundLayer;
     public Transform crateBottom;
@@ -29,6 +31,9 @@ public class CrateMove : MonoBehaviour {
 
     void Start() {
         lastColliderPos = crateBottom.position;
+		rb2D = GetComponent<Rigidbody2D>();
+		//freeze horizontal position when player is not tuching crate:
+		rb2D.constraints = RigidbodyConstraints2D.FreezePositionX; 
     }
 
     void Update() {
@@ -74,12 +79,17 @@ public class CrateMove : MonoBehaviour {
             Debug.Log("Hit [P] to pull");
             isTouchingPlayer = true;
             thePlayer = other.gameObject;
+
+			//unfreeze horizontal position when player IS touching crate:
+			rb2D.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             isTouchingPlayer = false;
+			//freeze horizontal position when player is not touching crate:
+			rb2D.constraints = RigidbodyConstraints2D.FreezePositionX; 
         }
     }
 

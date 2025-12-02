@@ -21,12 +21,16 @@ public class PlayerProjectile : MonoBehaviour{
 
       //if the bullet hits a collider, play the explosion animation, then destroy the effect and the bullet
       void OnTriggerEnter2D(Collider2D other){
-            //if (other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
-                  //gameHandlerObj.playerGetHit(damage);
-              //    other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);
-            //}
-           if ((other.gameObject.tag != "Player") && (other.gameObject.tag != "Player_torso")) {
-				Debug.Log("I hit something: " + other.gameObject.name);
+            if (other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
+                //gameHandlerObj.playerGetHit(damage);
+              	other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);
+        	}
+           if (
+				(other.gameObject.tag != "Player") && 
+		   		(other.gameObject.tag != "Player_torso") && 
+		   		(other.gameObject.tag != "Battery")
+				) {
+				//Debug.Log("I hit something: " + other.gameObject.name);
                   gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
                   // Play hit sound at the projectile's position
