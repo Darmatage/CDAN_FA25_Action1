@@ -11,6 +11,7 @@ TagManager:
   - door
   - Battery
   - WallToggleButton
+  - Car
   layers:
   - Default
   - TransparentFX
