@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - door
   - Battery
+  - WallToggleButton
   layers:
   - Default
   - TransparentFX
