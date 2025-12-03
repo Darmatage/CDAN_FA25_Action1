@@ -144,6 +144,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   isFlashlit: 0
+  isHurt: 0
 --- !u!1 &4444486649608300369
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 80
   m_Sprite: {fileID: 1378544196, guid: 5815ba9ecc78ca04aa0d3dfea73d6eed, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7924528, g: 0.42986828, b: 0.42986828, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

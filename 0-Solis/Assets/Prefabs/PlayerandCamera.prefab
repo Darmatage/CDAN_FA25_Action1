@@ -3397,7 +3397,7 @@ MonoBehaviour:
   anim: {fileID: 7377040545897975454}
   rb: {fileID: 1481146605299866934}
   feet: {fileID: 2241711943414054755}
-  jumpForce: 8
+  jumpForce: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3569,6 +3569,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  lastHitObject: {fileID: 0}
   flashlightOnSound: {fileID: 4353093213354318089}
   flashlightOffSound: {fileID: 9027272149448223271}
 --- !u!114 &2315725832792971599
