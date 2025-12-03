@@ -3397,7 +3397,7 @@ MonoBehaviour:
   anim: {fileID: 7377040545897975454}
   rb: {fileID: 1481146605299866934}
   feet: {fileID: 2241711943414054755}
-  jumpForce: 10
+  jumpForce: 9
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3511,7 +3511,7 @@ MonoBehaviour:
   Glow: {fileID: 2369080295687371889}
   redColor:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 1, g: 0, b: 0, a: 0}
     key1: {r: 1, g: 1, b: 1, a: 0}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -3541,7 +3541,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   greenColor:
     serializedVersion: 2
-    key0: {r: 0.4292158, g: 0.86415094, b: 0.37011746, a: 1}
+    key0: {r: 0.4292158, g: 0.86415094, b: 0.37011746, a: 0}
     key1: {r: 1, g: 1, b: 1, a: 0}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
