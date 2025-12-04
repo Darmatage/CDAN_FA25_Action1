@@ -169,6 +169,7 @@ public class GameHandler : MonoBehaviour
     {
     player.GetComponent<PlayerMove>().isAlive = false;
     player.GetComponent<PlayerJump>().isAlive = false;
+    gotTokens = 100;
 
     yield return new WaitForSeconds(1f);
 
