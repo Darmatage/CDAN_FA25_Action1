@@ -12,6 +12,7 @@ TagManager:
   - Battery
   - WallToggleButton
   - Car
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
