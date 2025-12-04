@@ -13,7 +13,7 @@ public class PlayerJump : MonoBehaviour
     public float jumpForce = 20f;
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
-    public float groundRange = 0.0002f;
+    public float groundRange = 0.1f;
     public bool isAlive = true;
 
     [Header("Jump Tracking")]
@@ -42,6 +42,14 @@ public class PlayerJump : MonoBehaviour
         if (Input.GetButtonDown("Jump") && canJump && isAlive)
             Jump();
     }
+    void OnDrawGizmos()
+{
+    if (feet != null)
+    {
+        Gizmos.color = Color.green; // color of the circle
+        Gizmos.DrawWireSphere(feet.position, groundRange);
+    }
+}
 
     public void Jump()
     {

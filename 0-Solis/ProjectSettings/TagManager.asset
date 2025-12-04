@@ -13,6 +13,7 @@ TagManager:
   - WallToggleButton
   - Car
   - Checkpoint
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -3405,7 +3405,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
-  groundRange: 0.2
+  groundRange: 0.1
   isAlive: 1
   canJump: 0
   jumpTimes: 0
