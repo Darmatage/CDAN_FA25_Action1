@@ -1722,7 +1722,71 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CharSpritePlayer(OLD)_0: 7496344757062418712
+      CharSpritePlayer(OLD)_1: 4831868909914420266
+      CharSpritePlayer(OLD)_10: 4386516951471548666
+      CharSpritePlayer(OLD)_11: 8911581201629491091
+      CharSpritePlayer(OLD)_12: 800530201900837462
+      CharSpritePlayer(OLD)_13: -3040254849252508386
+      CharSpritePlayer(OLD)_14: 8149773995563324904
+      CharSpritePlayer(OLD)_15: -3499803975129536048
+      CharSpritePlayer(OLD)_16: -4791941337862123419
+      CharSpritePlayer(OLD)_17: -6031407401446865280
+      CharSpritePlayer(OLD)_18: 5721899265674005403
+      CharSpritePlayer(OLD)_19: -7361595303822879255
+      CharSpritePlayer(OLD)_2: 4410268898573177331
+      CharSpritePlayer(OLD)_20: 8212286989014437036
+      CharSpritePlayer(OLD)_21: -8755290857911138157
+      CharSpritePlayer(OLD)_22: -4901353491190681883
+      CharSpritePlayer(OLD)_23: 6182228666170576823
+      CharSpritePlayer(OLD)_24: 1277640400298223090
+      CharSpritePlayer(OLD)_25: 5333335839895232605
+      CharSpritePlayer(OLD)_26: -4271677026204973443
+      CharSpritePlayer(OLD)_27: 8686757008199159781
+      CharSpritePlayer(OLD)_28: 2469119594619670351
+      CharSpritePlayer(OLD)_29: -7295797794658059779
+      CharSpritePlayer(OLD)_3: -844542962029231373
+      CharSpritePlayer(OLD)_30: -7704741605855531124
+      CharSpritePlayer(OLD)_31: 4110898741970173121
+      CharSpritePlayer(OLD)_32: 7734233711325408428
+      CharSpritePlayer(OLD)_33: -8093094070085550392
+      CharSpritePlayer(OLD)_34: 1923264372293718705
+      CharSpritePlayer(OLD)_35: 1857068101379346275
+      CharSpritePlayer(OLD)_36: 3937861389271047088
+      CharSpritePlayer(OLD)_37: -6924958091033491216
+      CharSpritePlayer(OLD)_38: 1687248432696813622
+      CharSpritePlayer(OLD)_39: 155066704471722127
+      CharSpritePlayer(OLD)_4: 6123604616554372540
+      CharSpritePlayer(OLD)_40: 4135672008966661564
+      CharSpritePlayer(OLD)_41: 8984312219212177679
+      CharSpritePlayer(OLD)_42: -6853564967152371154
+      CharSpritePlayer(OLD)_43: -2137045523640534287
+      CharSpritePlayer(OLD)_44: -8015939539832362186
+      CharSpritePlayer(OLD)_45: 627810074908700520
+      CharSpritePlayer(OLD)_46: -1246075350065003222
+      CharSpritePlayer(OLD)_47: 9079424582087212692
+      CharSpritePlayer(OLD)_48: -4669703409453240431
+      CharSpritePlayer(OLD)_49: -2743079865894244482
+      CharSpritePlayer(OLD)_5: 76381528777315765
+      CharSpritePlayer(OLD)_50: -2764387910149194117
+      CharSpritePlayer(OLD)_51: -6303024324290111203
+      CharSpritePlayer(OLD)_52: 7313248652335328440
+      CharSpritePlayer(OLD)_53: 164052759537608821
+      CharSpritePlayer(OLD)_54: -8814171798318193020
+      CharSpritePlayer(OLD)_55: 5714393534924271131
+      CharSpritePlayer(OLD)_56: 8587550903276851063
+      CharSpritePlayer(OLD)_57: 4668751725470553404
+      CharSpritePlayer(OLD)_58: 6371904353791216329
+      CharSpritePlayer(OLD)_59: 5762563883440991318
+      CharSpritePlayer(OLD)_6: -3586789011403484548
+      CharSpritePlayer(OLD)_60: 5908430083033719386
+      CharSpritePlayer(OLD)_61: -5698927965487071131
+      CharSpritePlayer(OLD)_62: 2127658934322271766
+      CharSpritePlayer(OLD)_63: -5454194754849800241
+      CharSpritePlayer(OLD)_7: -6580214393121326364
+      CharSpritePlayer(OLD)_8: 8909223841635787781
+      CharSpritePlayer(OLD)_9: 1271425837922466400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
