@@ -6,66 +6,104 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class PauseMenuHandler : MonoBehaviour {
+public class PauseMenuHandler : MonoBehaviour
+{
+    public static bool GameisPaused = false;
+    public GameObject pauseMenuUI;
+    public AudioMixer mixer;
+    public static float volumeLevel = 1.0f;
+    public GameObject button;
+    private Slider sliderVolumeCtrl;
 
-        public static bool GameisPaused = false;
-        public GameObject pauseMenuUI;
-        public AudioMixer mixer;
-        public static float volumeLevel = 1.0f;
-        private Slider sliderVolumeCtrl;
+    [Header("Pause Sound")]
+    public AudioSource sfxSource;     // AudioSource to play sound
+    public AudioClip pauseSFX;        // Sound played on pause/resume toggle
 
-        void Awake(){
-                SetLevel (volumeLevel);
-                GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-                if (sliderTemp != null){
-                        sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
-                        sliderVolumeCtrl.value = volumeLevel;
-                }
+    void Awake()
+    {
+        SetLevel(volumeLevel);
+
+        GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+        if (sliderTemp != null)
+        {
+            sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+            sliderVolumeCtrl.value = volumeLevel;
         }
+    }
 
-        void Start(){
-                pauseMenuUI.SetActive(false);
-                GameisPaused = false;
-        }
+    void Start()
+    {
+        pauseMenuUI.SetActive(false);
+        GameisPaused = false;
+    }
 
-        void Update(){
-                if (Input.GetKeyDown(KeyCode.Escape)){
-                        if (GameisPaused){ Resume(); }
-                        else{ Pause(); }
-                }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PlayPauseSound();
+            if (GameisPaused) Resume();
+            else Pause();
         }
+    }
 
-        public void Pause(){
-                if (!GameisPaused){
-                        pauseMenuUI.SetActive(true);
-                        Time.timeScale = 0f;
-                        GameisPaused = true;}
-             else { Resume (); }
-             //NOTE: This function is for the pause button
-        }
+    public void Pause()
+    {
+        if (!GameisPaused)
+        {
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            GameisPaused = true;
 
-        public void Resume(){
-                pauseMenuUI.SetActive(false);
-                Time.timeScale = 1f;
-                GameisPaused = false;
+            if (button != null)
+                button.SetActive(false);
         }
+        else
+        {
+            Resume();
+        }
+    }
 
-        public void SetLevel (float sliderValue){
-                mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
-                volumeLevel = sliderValue;
-        }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameisPaused = false;
 
-        public void RestartGame(){
-                Time.timeScale = 1f;
-                SceneManager.LoadScene("MainMenu");
-                // Please also reset all static variables here, for new games!
-        }
+        if (button != null)
+            button.SetActive(true);
+    }
 
-        public void QuitGame(){
-                #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-                #else
-                Application.Quit();
-                #endif
+    public void SetLevel(float sliderValue)
+    {
+        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+        volumeLevel = sliderValue;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+
+        // Reset static variables if needed
+        GameisPaused = false;
+        volumeLevel = 1f;
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
+    private void PlayPauseSound()
+    {
+        if (sfxSource != null && pauseSFX != null)
+        {
+            sfxSource.PlayOneShot(pauseSFX);
         }
+    }
 }
