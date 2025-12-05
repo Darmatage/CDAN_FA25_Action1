@@ -114,9 +114,10 @@ public class Checkpoint : MonoBehaviour
     GameHandler gameHandler = FindObjectOfType<GameHandler>();
     if (gameHandler != null)
     {
-        gameHandler.playerGetTokens(50);
+        GameHandler.gotTokens = 100;
+        FindObjectOfType<GameHandler>().updateStatsDisplay();
     }
 
-    Debug.Log("Checkpoint activated: " + name + " | +50 Tokens awarded");
+    Debug.Log("Checkpoint activated: " + name + " | Tokens awarded");
 }
 }

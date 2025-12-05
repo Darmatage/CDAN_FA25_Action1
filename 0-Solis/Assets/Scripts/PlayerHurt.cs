@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerHurt: MonoBehaviour {
 
-      //public Animator animator;
+      public Animator animator;
       public Rigidbody2D rb2D;
       public AudioSource audioSource;
 
         public AudioSource[] hurtSources;
 
       void Start(){
-           //animator = gameObject.GetComponentInChildren<Animator>();
+           animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();           
       }
 
@@ -27,6 +27,6 @@ public class PlayerHurt: MonoBehaviour {
 
       public void playerDead(){
             rb2D.isKinematic = true;
-            //animator.SetTrigger ("Dead");
+            animator.SetTrigger ("Dead");
       }
 }
