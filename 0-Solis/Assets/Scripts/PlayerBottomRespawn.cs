@@ -1,37 +1,44 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBottomRespawn : MonoBehaviour {
-
+public class PlayerBottomRespawn : MonoBehaviour
+{
     public GameHandler gameHandler;
     public Transform playerPos;
     public Transform pSpawnFall;
     public int damage = 10;
 
-    private bool hasKilled = false;   // <-- NEW
+    private bool canKill = true;   // <-- changed
 
-    void Start() {
+    [Header("Cooldown")]
+    public float killCooldown = 1f; // 1 second wait between kill checks
+
+    void Start()
+    {
         playerPos = GameObject.FindWithTag("Player").GetComponent<Transform>();
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 
-    void Update() {
+    void Update()
+    {
         if (playerPos == null) return;
 
-        // update spawn if checkpoints change
         pSpawnFall = playerPos.GetComponent<PlayerRespawn>().pSpawn;
 
-        if (!hasKilled && transform.position.y >= playerPos.position.y) {
-            hasKilled = true; // <-- prevent more kills
-            Debug.Log("Kill floor triggered once");
+        if (canKill && transform.position.y >= playerPos.position.y)
+        {
+            Debug.Log("Kill floor triggered");
+            canKill = false;
             gameHandler.playerDies();
+
+            StartCoroutine(KillCooldownTimer());
         }
     }
 
-    // ---- RESET ON LEVEL RELOAD OR RESPAWN ----
-    public void ResetKill()
+    IEnumerator KillCooldownTimer()
     {
-        hasKilled = false;
+        yield return new WaitForSeconds(killCooldown);
+        canKill = true; // <-- ready to kill again after 1 sec
     }
 }

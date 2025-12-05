@@ -13,6 +13,8 @@ public class GameHandler : MonoBehaviour
     public TMP_Text healthText;
     public static int Lives;
     public int maxLives = 5;
+    private PlayerRespawn playerRespawn;
+
 
     public GameObject textLives;
 
@@ -47,6 +49,7 @@ public class GameHandler : MonoBehaviour
         sceneName = SceneManager.GetActiveScene().name;
         //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
         playerHealth = StartPlayerHealth;
+        playerRespawn = player.GetComponent<PlayerRespawn>(); 
 
         if (Lives <= 0)
         Lives = maxLives;
@@ -149,9 +152,8 @@ public class GameHandler : MonoBehaviour
 
     public void playerDies()
 {
-    Lives--;  // subtract 1 life on death
+    Lives--; // lose a life
 
-    // If lives run out → game over
     if (Lives <= 0)
     {
         Lives = 0;
@@ -160,9 +162,35 @@ public class GameHandler : MonoBehaviour
         return;
     }
 
-    // If player still has lives → reload current level
-    lastLevelDied = sceneName;
-    StartCoroutine(DeathPause());
+    // still have lives, so respawn instead of reload
+    StartCoroutine(RespawnPlayer());
+}
+
+IEnumerator RespawnPlayer()
+{
+    // disable controls
+    player.GetComponent<PlayerMove>().isAlive = false;
+    player.GetComponent<PlayerJump>().isAlive = false;
+
+    yield return new WaitForSeconds(1f);
+
+    // reset stats
+    playerHealth = StartPlayerHealth;
+    updateStatsDisplay();
+
+    // teleport player to their checkpoint
+    if (playerRespawn.pSpawn != null)
+    {
+        player.transform.position = playerRespawn.pSpawn.position;
+    }
+    else
+    {
+        Debug.LogWarning("No spawn point set yet!");
+    }
+
+    // re-enable controls
+    player.GetComponent<PlayerMove>().isAlive = true;
+    player.GetComponent<PlayerJump>().isAlive = true;
 }
 
     IEnumerator DeathPause()
@@ -211,5 +239,10 @@ public class GameHandler : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
