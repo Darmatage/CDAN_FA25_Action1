@@ -6603,8 +6603,8 @@ MonoBehaviour:
   zeroEnergyMaxPitch: 1.2
   breathingMinPitch: 1
   breathingMaxPitch: 1
-  alarmMinPitch: 0.8
-  alarmMaxPitch: 0.8
+  alarmMinPitch: 1
+  alarmMaxPitch: 1
   fadeDuration: 0.2
   displayDuration: 1
   waitBetweenPhases: 1

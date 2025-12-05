@@ -14,6 +14,7 @@ public class GameHandler : MonoBehaviour
     public static int Lives;
     public int maxLives = 5;
     private PlayerRespawn playerRespawn;
+    
 
 
     public GameObject textLives;
