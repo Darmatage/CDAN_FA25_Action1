@@ -93,6 +93,9 @@ public class GameHandlerZeroEnergy : MonoBehaviour
 
         zeroEnergyRunning = false;
 
+         for (int i = 0; i < phaseTriggered.Length; i++)
+         phaseTriggered[i] = false;
+
         // Hide shared overlay trio
         if (sharedOverlayTrio != null)
         {
@@ -101,7 +104,14 @@ public class GameHandlerZeroEnergy : MonoBehaviour
 
             foreach (var txt in sharedOverlayTrio.texts)
                 if (txt != null) txt.gameObject.SetActive(false);
+
+                
         }
+        foreach (var phase in phases)
+    {
+        if (phase.phaseImage != null)
+            phase.phaseImage.gameObject.SetActive(false);
+    }
     }
 
     private IEnumerator ZeroEnergySequence()
@@ -173,6 +183,7 @@ public class GameHandlerZeroEnergy : MonoBehaviour
         }
 
         zeroEnergyRunning = false;
+        //StopZeroEnergySequence();
         FindObjectOfType<GameHandler>().playerDies();
     }
 

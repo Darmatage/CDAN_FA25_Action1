@@ -154,6 +154,9 @@ public class GameHandler : MonoBehaviour
 {
     Lives--; // lose a life
 
+    if (zeroEnergyUIEffect != null)
+    zeroEnergyUIEffect.StopZeroEnergySequence();
+
     if (Lives <= 0)
     {
         Lives = 0;
@@ -168,9 +171,12 @@ public class GameHandler : MonoBehaviour
 
 IEnumerator RespawnPlayer()
 {
-    // disable controls
+    if (zeroEnergyUIEffect != null)
+    zeroEnergyUIEffect.StopZeroEnergySequence();
+    
     player.GetComponent<PlayerMove>().isAlive = false;
     player.GetComponent<PlayerJump>().isAlive = false;
+    gotTokens = 100;
 
     yield return new WaitForSeconds(1f);
 
