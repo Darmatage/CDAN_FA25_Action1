@@ -15,6 +15,8 @@ public class Enemy_BossSystem : MonoBehaviour
 	public GameObject theBoss;
 
 	Transform player;
+
+	bool playerDead = false;
 	
     void Start()
     {
@@ -25,7 +27,7 @@ public class Enemy_BossSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (theBoss != null)
+        if (theBoss != null && !playerDead)
 		{
 			float distToNext = Vector3.Distance(theBoss.transform.position, nextPoint.position);
 
@@ -50,6 +52,11 @@ public class Enemy_BossSystem : MonoBehaviour
 		Debug.Log("spwning boss");
 		theBoss = Instantiate(bossPrefab, bossPoints[0].position, Quaternion.identity);
 		cameraShake.ShakeCamera(1f, 0.3f);
+	}
+
+	public void PlayerDead()
+	{
+		playerDead = true;
 	}
 
 
