@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,10 +140,10 @@ TextureImporter:
       name: CaveCrystalLights_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 134
-        width: 124
-        height: 119
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: CaveCrystalLights_1
       rect:
         serializedVersion: 2
-        x: 134
-        y: 132
-        width: 118
-        height: 117
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: CaveCrystalLights_2
       rect:
         serializedVersion: 2
-        x: 165
-        y: 231
-        width: 13
-        height: 19
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: CaveCrystalLights_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 132
-        width: 13
-        height: 19
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,121 +224,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: CaveCrystalLights_4
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 11
-        width: 115
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b875271c46f3ae90800000000000000
-      internalID: -7015492987846821706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CaveCrystalLights_5
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 37
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a00f3a7b094664640800000000000000
-      internalID: 5063845403743744010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CaveCrystalLights_6
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 9
-        width: 119
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 925c212c615162f40800000000000000
-      internalID: 5703269165600785705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CaveCrystalLights_7
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 5
-        width: 17
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4e70812454e85e40800000000000000
-      internalID: 5645513182899371597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CaveCrystalLights_8
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 25
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c36cea2595ac00a00800000000000000
-      internalID: 720798425367365180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fadaf853b182a3b4783ab933b9dceaff
     internalID: 0
     vertices: []
     indices: 
@@ -347,7 +237,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CaveCrystalLights_0: 4262640246232233169
+      CaveCrystalLights_1: -8575617657423389653
+      CaveCrystalLights_2: 3931176149843538847
+      CaveCrystalLights_3: -1205467508559624017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
