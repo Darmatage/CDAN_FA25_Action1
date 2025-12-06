@@ -14,7 +14,12 @@ public class PlatformMoveWithPlayer : MonoBehaviour {
                      transform.position += (velocity * Time.deltaTime);
               }
        }
-
+       public void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "ElevatorStop" ){
+			moving = false;
+		}
+	}
        private void OnCollisionEnter2D(Collision2D other){
               if (other.gameObject.tag == "Player"){
                      moving = true;
