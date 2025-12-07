@@ -365,7 +365,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1597680017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2657,7 +2657,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.51056594, g: 0.5999999, b: 0.5405819, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -2, y: -97, z: 0}
   m_Size: {x: 358, y: 98, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -347992,7 +347992,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.51056594, g: 0.5999999, b: 0.5405819, a: 1}
+  m_Color: {r: 0.6445781, g: 0.7132075, b: 0.66844916, a: 1}
   m_Origin: {x: -2, y: -85, z: 0}
   m_Size: {x: 36, y: 86, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -350644,6 +350644,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerandCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2369080295687371889, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369080295687371889, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369080295687371889, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7945525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369080295687371889, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Intensity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369080295687371889, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815729981944223548, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3132075
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815729981944223548, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3102781
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815729981944223548, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.10814522
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815729981944223548, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815729981944223548, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.853
+      objectReference: {fileID: 0}
     - target: {fileID: 3988000831416455098, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: magnitude
       value: 0.5
@@ -350667,6 +350707,10 @@ PrefabInstance:
     - target: {fileID: 5889691162012659581, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890888797328593516, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7651002469482072865, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -351551,6 +351595,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 78070347}
     m_Modifications:
+    - target: {fileID: 1736711186148225990, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736711186148225990, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736711186148225990, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
+      propertyPath: m_LocalBounds.m_Center.x
+      value: -0.095700264
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736711186148225990, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: 0.37520027
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736711186148225990, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 9.5043
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736711186148225990, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 9.3454
+      objectReference: {fileID: 0}
     - target: {fileID: 8138060660064102076, guid: 2079bb6008ac5584e949c8e741f69019, type: 3}
       propertyPath: m_Name
       value: CaveLights4
