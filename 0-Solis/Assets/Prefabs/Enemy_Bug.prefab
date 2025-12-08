@@ -127,6 +127,7 @@ MonoBehaviour:
   attackRange: 10
   isAttacking: 0
   bloodSplatter: {fileID: 244500748440995492, guid: d17faf6e3e3f32243a5b766c70ba060c, type: 3}
+  immuneToFlashlight: 0
   retreatDistance: 12
 --- !u!114 &2280884551146366792
 MonoBehaviour:
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthLoot: {fileID: 244500748440995492, guid: d17faf6e3e3f32243a5b766c70ba060c, type: 3}
-  maxHealth: 10
+  maxHealth: 5
   currentHealth: 0
   isFlashlit: 0
   isHurt: 0
