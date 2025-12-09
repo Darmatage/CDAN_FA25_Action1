@@ -7,6 +7,9 @@ public class WallToggleButton : MonoBehaviour
     public int channel = 0;
     public List<WallToggle> wallList = new List<WallToggle>();
 
+    // NEW: List of objects to disable
+    public List<ChannelDisabler> disablerList = new List<ChannelDisabler>();
+
     public GameObject buttonUp;
     public GameObject buttonDown;
     public bool snapToNearestGridSpace = true;
@@ -17,8 +20,8 @@ public class WallToggleButton : MonoBehaviour
     public AudioClip soundOff;        
 
     [Header("Lights")]
-    public Light2D onLight;     // Light when button is pressed
-    public Light2D offLight;    // Light when button is released
+    public Light2D onLight;     
+    public Light2D offLight;    
 
     private bool pressed = false;
     private bool setup = true;
@@ -59,9 +62,16 @@ public class WallToggleButton : MonoBehaviour
             buttonUp.SetActive(!pressed);
             buttonDown.SetActive(pressed);
 
+            // Toggle doors
             foreach (WallToggle wall in wallList)
             {
                 wall.ToggleState();
+            }
+
+            // NEW: Disable channel objects
+            foreach (ChannelDisabler disabler in disablerList)
+            {
+                disabler.DisableObject();
             }
 
             // Play sound
@@ -90,5 +100,12 @@ public class WallToggleButton : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Button state persists, so no action needed
+    }
+
+    // NEW: Method for ChannelDisabler to register itself
+    public void RegisterDisabler(ChannelDisabler disabler)
+    {
+        if (!disablerList.Contains(disabler))
+            disablerList.Add(disabler);
     }
 }

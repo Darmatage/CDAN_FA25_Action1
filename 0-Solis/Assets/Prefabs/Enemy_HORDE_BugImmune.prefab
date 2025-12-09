@@ -124,9 +124,9 @@ GameObject:
   - component: {fileID: 8555015987727845003}
   - component: {fileID: 677448707203093684}
   - component: {fileID: 1222705511342825314}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy_HORDE_BugImmune
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
