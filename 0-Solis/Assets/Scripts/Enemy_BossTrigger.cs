@@ -16,7 +16,7 @@ public class Enemy_BossTrigger : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player" && !hasBoss)
 		{
-			Debug.Log("Pyer hit trigger");
+			Debug.Log("Player hit trigger");
 			bossSystem.SpawnBoss();
 			hasBoss = true;
 		}
