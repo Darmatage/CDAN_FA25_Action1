@@ -45,18 +45,28 @@ public class GameHandler : MonoBehaviour
     public GameHandlerZeroEnergy zeroEnergyUIEffect; // assign in inspector
 
     void Start()
-    {
-        player = GameObject.FindWithTag("Player");
-        sceneName = SceneManager.GetActiveScene().name;
-        //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-        playerHealth = StartPlayerHealth;
-        playerRespawn = player.GetComponent<PlayerRespawn>(); 
+{
+    sceneName = SceneManager.GetActiveScene().name;
 
-        if (Lives <= 0)
-        Lives = maxLives;
-        //}
-        updateStatsDisplay();
+    player = GameObject.FindWithTag("Player");
+
+    // If no player exists (Main Menu, Credits, etc), stop here
+    if (player == null)
+    {
+        Debug.Log("No player found in this scene. GameHandler running in non-gameplay scene.");
+        return;
     }
+
+    // Gameplay-only setup
+    playerHealth = StartPlayerHealth;
+
+    playerRespawn = player.GetComponent<PlayerRespawn>();
+
+    if (Lives <= 0)
+        Lives = maxLives;
+
+    updateStatsDisplay();
+}
 
     public void playerGetTokens(int newTokens)
     {

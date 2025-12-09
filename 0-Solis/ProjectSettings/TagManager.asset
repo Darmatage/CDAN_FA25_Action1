@@ -16,6 +16,7 @@ TagManager:
   - Door
   - ElevatorStop
   - BossSystem
+  - AudioManager
   layers:
   - Default
   - TransparentFX
