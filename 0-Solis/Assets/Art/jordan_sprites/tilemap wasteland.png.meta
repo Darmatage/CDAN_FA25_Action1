@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 967ff52a3cbbbf74bb4edcbb082c3d27
+guid: e6340ce1f82653f46ab9a079b9ea15a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 275185416072073027
-    second: Customer_0
+      213: -6752333080926411985
+    second: tilemap wasteland_0
+  - first:
+      213: -3578731741450309495
+    second: tilemap wasteland_1
+  - first:
+      213: -188884965759120976
+    second: tilemap wasteland_2
+  - first:
+      213: -5111536199043234212
+    second: tilemap wasteland_3
+  - first:
+      213: 7639620935668789484
+    second: tilemap wasteland_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Customer_0
+      name: tilemap wasteland_0
       rect:
         serializedVersion: 2
-        x: 124
-        y: 49
-        width: 652
-        height: 1377
+        x: 10
+        y: 172
+        width: 51
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34f085c8da7a1d300800000000000000
-      internalID: 275185416072073027
+      spriteID: f23234a96d4ea42a0800000000000000
+      internalID: -6752333080926411985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap wasteland_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 190
+        width: 106
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980707c217ac55ec0800000000000000
+      internalID: -3578731741450309495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap wasteland_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 223
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b90488df12f06df0800000000000000
+      internalID: -188884965759120976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap wasteland_3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 207
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c564a77b8ec2019b0800000000000000
+      internalID: -5111536199043234212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap wasteland_4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 191
+        width: 43
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0fc29b3c2650a60800000000000000
+      internalID: 7639620935668789484
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Customer_0: 275185416072073027
+      tilemap wasteland_0: -6752333080926411985
+      tilemap wasteland_1: -3578731741450309495
+      tilemap wasteland_2: -188884965759120976
+      tilemap wasteland_3: -5111536199043234212
+      tilemap wasteland_4: 7639620935668789484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
