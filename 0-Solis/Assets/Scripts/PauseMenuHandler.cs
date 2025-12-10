@@ -111,11 +111,12 @@ public class PauseMenuHandler : MonoBehaviour
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+    SceneManager.LoadScene("MainMenu");
+//#if UNITY_EDITOR
+//        UnityEditor.EditorApplication.isPlaying = false;
+//#else
+//        Application.Quit();
+//#endif
     }
 
     private void PlayPauseSound()
@@ -125,4 +126,6 @@ public class PauseMenuHandler : MonoBehaviour
             sfxSource.PlayOneShot(pauseSFX);
         }
     }
+
+   
 }

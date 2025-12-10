@@ -20,6 +20,7 @@ public class CloudManager : MonoBehaviour
 	}
 
 	void FixedUpdate () {
+		if (target == null) return;
 		//follow:
 		Vector2 offsetOfPlayer = new Vector2(target.transform.position.x - leftOffset, target.transform.position.y + heightOffset);
 

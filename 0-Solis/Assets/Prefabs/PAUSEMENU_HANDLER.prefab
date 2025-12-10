@@ -232,7 +232,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1406,7 +1406,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 623209003441945080, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_text
-      value: QUIT
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 623209003441945080, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 623209003441945080, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_wordSpacing
+      value: -57.12
       objectReference: {fileID: 0}
     - target: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_Name
