@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,45 +116,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ElevatorPowerSwitch (1)_0
+      name: ElevatorPowerSwitch_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 29
-        height: 44
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2a7813ee3d81a03f0800000000000000
-      internalID: -933906674212567134
+      spriteID: cbd97e1b6efa2c14c894050788d98727
+      internalID: 102246046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ElevatorPowerSwitch (1)_1
+      name: ElevatorPowerSwitch_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 0
-        width: 28
-        height: 42
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c8d5f36a8fa7462f0800000000000000
-      internalID: -980523610500276852
+      spriteID: b60184d266e70394d925884760adb092
+      internalID: 1386888910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorPowerSwitch_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401f41bf9b8422041b161e16c0eeed91
+      internalID: 1995727668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorPowerSwitch_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa52df3764054b4f9adf1a7770a6f24
+      internalID: 2033547888
       vertices: []
       indices: 
       edges: []
@@ -163,7 +207,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8aa42fbdb419a7d4e8e1358585bb9cc1
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +217,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ElevatorPowerSwitch (1)_0: -933906674212567134
-      ElevatorPowerSwitch (1)_1: -980523610500276852
+      ElevatorPowerSwitch_0: 102246046
+      ElevatorPowerSwitch_1: 1386888910
+      ElevatorPowerSwitch_2: 1995727668
+      ElevatorPowerSwitch_3: 2033547888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

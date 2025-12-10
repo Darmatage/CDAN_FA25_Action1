@@ -53,6 +53,7 @@ public class EnemyMeleeDamage : MonoBehaviour {
 			  
               GetComponent<Collider2D>().enabled = false;
 			  GetComponent<Rigidbody2D>().isKinematic = true;
+			  GetComponent<EnemyMoveHit>().enabled = false;
               StartCoroutine(Death());
        }
 
@@ -62,7 +63,7 @@ public class EnemyMeleeDamage : MonoBehaviour {
 			anim.SetBool ("isDead", true);
 			Debug.Log("You Killed a baddie. You deserve loot!");
 			yield return new WaitForSeconds(5f);
-			Destroy(gameObject);
+			//Destroy(gameObject);
        }
 
        IEnumerator ResetColor(){

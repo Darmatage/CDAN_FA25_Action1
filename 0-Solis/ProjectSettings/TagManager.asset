@@ -17,6 +17,7 @@ TagManager:
   - ElevatorStop
   - BossSystem
   - AudioManager
+  - FadeToBlack
   layers:
   - Default
   - TransparentFX

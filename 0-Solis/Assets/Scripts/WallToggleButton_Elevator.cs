@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class WallToggleButton : MonoBehaviour
+public class WallToggleButton_Elevator : MonoBehaviour
 {
     public int channel = 1; //match button/s channel with dor/channel
-    public List<WallToggle> wallList = new List<WallToggle>();
+    public List<WallToggle_Elevator> wallList = new List<WallToggle_Elevator>();
 
     // NOT USED in game,but another script references: List of objects to disable
     public List<ChannelDisabler> disablerList = new List<ChannelDisabler>();
@@ -45,7 +45,7 @@ public class WallToggleButton : MonoBehaviour
     {
         if (setup)
         {
-            foreach (WallToggle wall in wallList)
+            foreach (WallToggle_Elevator wall in wallList)
             {
                 wall.SetColor(GetComponentInChildren<SpriteRenderer>().color);
             }
@@ -55,15 +55,16 @@ public class WallToggleButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player" && !pressed)
         {
-            pressed = !pressed;
+            //pressed = !pressed;
+			pressed=true;
 
             buttonUp.SetActive(!pressed);
             buttonDown.SetActive(pressed);
 
-            // Toggle doors tht have the same channel
-            foreach (WallToggle wall in wallList)
+            // Toggle doors that have the same channel
+            foreach (WallToggle_Elevator wall in wallList)
             {
                 wall.ToggleState();
             }
@@ -116,3 +117,5 @@ public class WallToggleButton : MonoBehaviour
 	
 
 }
+
+//NOTE: This is version of the door open a sript for when you want a level to only be changed once

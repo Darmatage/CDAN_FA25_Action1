@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 32e0f5fe363deb04bae9fb208a5136a6
+guid: e512952a77917514aa13030649759eae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8287873616420496286
-    second: clouds_0
+      213: -5028058232420668227
+    second: leverandtile_0
   - first:
-      213: 7911139459876737251
-    second: clouds_1
-  - first:
-      213: -1115256706364395465
-    second: clouds_2
+      213: 139094392665418936
+    second: leverandtile_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clouds_0
+      name: leverandtile_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 202
-        width: 108
-        height: 25
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e936312a421740370800000000000000
-      internalID: 8287873616420496286
+      spriteID: dbc669a6dafb83ab0800000000000000
+      internalID: -5028058232420668227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_1
+      name: leverandtile_1
       rect:
         serializedVersion: 2
-        x: 143
-        y: 209
-        width: 67
-        height: 27
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,42 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e0578a7c630acd60800000000000000
-      internalID: 7911139459876737251
+      spriteID: 8bc2219fc992ee100800000000000000
+      internalID: 139094392665418936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_2
+      name: leverandtile_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 155
-        width: 181
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73037c73fefc580f0800000000000000
-      internalID: -1115256706364395465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clouds_3
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 90
-        width: 111
-        height: 28
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7fa1a3729c493942896e1af53596a1a
-      internalID: 1228676060
+      spriteID: 5ffd97022d248a7458ca4939fb58241c
+      internalID: 1446516581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_4
+      name: leverandtile_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 96
-        width: 83
-        height: 21
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,30 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da1bf706f9354ee4d96013b1a7f71a09
-      internalID: 66648477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clouds_5
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 41
-        width: 187
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37d189969f6420743b792fa6270e9cb3
-      internalID: 701417939
+      spriteID: fcff2394efa06e746830a989294ce259
+      internalID: 873457217
       vertices: []
       indices: 
       edges: []
@@ -254,7 +207,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 037d0e5c07f2323438486aa382977160
+    spriteID: fb1bfd42608b4b84d969a811799ee51c
     internalID: 0
     vertices: []
     indices: 
@@ -264,12 +217,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      clouds_0: 8287873616420496286
-      clouds_1: 7911139459876737251
-      clouds_2: -1115256706364395465
-      clouds_3: 1228676060
-      clouds_4: 66648477
-      clouds_5: 701417939
+      leverandtile_0: -5028058232420668227
+      leverandtile_1: 139094392665418936
+      leverandtile_2: 1446516581
+      leverandtile_3: 873457217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

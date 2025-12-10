@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class Cloud : MonoBehaviour
 {
-	public float speed = 0.5f;
+	public float speed = 0.2f;
 	private Vector2 destination;
-	public int distance = 2500;
+	public int distance = 50;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +21,7 @@ public class Cloud : MonoBehaviour
 		transform.position = new Vector2(pos.x, pos.y);
 
 		float distanceToEnd = Vector3.Distance(transform.position, destination);
-		if (distanceToEnd <= 5)
+		if (distanceToEnd <= 2)
 		{
 			Destroy(gameObject);
 		}
