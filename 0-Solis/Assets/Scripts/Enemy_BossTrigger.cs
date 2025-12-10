@@ -4,27 +4,38 @@ using System.Collections.Generic;
 public class Enemy_BossTrigger : MonoBehaviour
 {
     public Enemy_BossSystem bossSystem;
-    [HideInInspector] public bool BossExists = false; // single source of truth
+    [HideInInspector] public bool BossExists = false;
     private bool hasTriggered = false;
+
+    [Header("Audio Manager")]
+    public AudioInterrupt audioManager; // single AudioInterrupt with multiple tracks as children
+    public string bossTrackName = "BossTrack";      // name of the boss track child
+    public string normalTrackName = "NormalTrack";  // name of the normal track child
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !hasTriggered)
         {
             Debug.Log("Player hit trigger");
+
+            // Spawn the boss
             bossSystem.SpawnBoss();
             BossExists = true;
             hasTriggered = true;
+
+            // Play boss music via AudioManager
+            if (audioManager != null)
+                audioManager.PlayTrackByName(bossTrackName);
         }
     }
 
     public void ResetBosses()
     {
-        hasTriggered = false;  // allow trigger to fire again
+        hasTriggered = false;
 
         if (bossSystem != null)
         {
-            // Destroy single boss if exists
+            // Destroy single boss
             if (bossSystem.theBoss != null)
             {
                 Destroy(bossSystem.theBoss);
@@ -35,8 +46,7 @@ public class Enemy_BossTrigger : MonoBehaviour
             if (bossSystem.theBosses != null)
             {
                 foreach (GameObject boss in bossSystem.theBosses)
-                    if (boss != null)
-                        Destroy(boss);
+                    if (boss != null) Destroy(boss);
 
                 bossSystem.theBosses.Clear();
             }
@@ -44,5 +54,9 @@ public class Enemy_BossTrigger : MonoBehaviour
 
         BossExists = false;
         Debug.Log("Bosses reset and BossExists = false");
+
+        // Play normal music via AudioManager
+        if (audioManager != null)
+            audioManager.PlayTrackByName(normalTrackName);
     }
 }

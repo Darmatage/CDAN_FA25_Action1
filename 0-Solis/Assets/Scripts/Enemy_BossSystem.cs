@@ -109,7 +109,8 @@ public class Enemy_BossSystem : MonoBehaviour
     }
 
     public void SpawnBoss()
-    {
+    {   
+        playerDead = false;
         if (!isHorde)
         {
             Debug.Log("spawning boss");

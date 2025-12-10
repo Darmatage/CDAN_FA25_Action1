@@ -38,4 +38,26 @@ public class AudioInterrupt : MonoBehaviour {
                         audioSource.Play();
                 }
         }
+        public void PlayTrackByName(string trackName)
+{
+    foreach (Transform child in transform)
+    {
+        if (child.name == trackName)
+        {
+            child.gameObject.SetActive(true); // turn on the track
+            AudioSource src = child.GetComponent<AudioSource>();
+            if (src != null)
+            {
+                src.time = 0f;
+                src.Play();
+            }
+        }
+        else
+        {
+            AudioSource src = child.GetComponent<AudioSource>();
+            if (src != null) src.Stop();
+            child.gameObject.SetActive(false); // turn off other tracks
+        }
+    }
+}
 }

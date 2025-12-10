@@ -238527,6 +238527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpawnStart
       objectReference: {fileID: 0}
+    - target: {fileID: 1801767397677050743, guid: 58aebd7ff5e438e4a879343ff663a4db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2954421970761375626, guid: 58aebd7ff5e438e4a879343ff663a4db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.13
@@ -240352,6 +240356,10 @@ PrefabInstance:
     - target: {fileID: 2455096336286241135, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
       propertyPath: m_Name
       value: GAMEHANDLER_CANVAS
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455096336286241135, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3416098262447504658, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
       propertyPath: m_AnchorMax.y

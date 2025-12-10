@@ -593848,6 +593848,22 @@ PrefabInstance:
       propertyPath: 'bossPoints.Array.data[12]'
       value: 
       objectReference: {fileID: 419404503}
+    - target: {fileID: 8631356119052231445, guid: e46153e7d936ad74a84b7d75d9c5f5f8, type: 3}
+      propertyPath: bossMusic
+      value: 
+      objectReference: {fileID: 1903341233}
+    - target: {fileID: 8631356119052231445, guid: e46153e7d936ad74a84b7d75d9c5f5f8, type: 3}
+      propertyPath: normalMusic
+      value: 
+      objectReference: {fileID: 1903341233}
+    - target: {fileID: 8631356119052231445, guid: e46153e7d936ad74a84b7d75d9c5f5f8, type: 3}
+      propertyPath: bossTrackName
+      value: MusicBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631356119052231445, guid: e46153e7d936ad74a84b7d75d9c5f5f8, type: 3}
+      propertyPath: normalTrackName
+      value: MusicLevel2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -611395,6 +611411,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cabbbfe9cdaf964fb10fa0c0fd62614, type: 3}
+--- !u!114 &1903341233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6396565377239343965, guid: e8a0a5b984b4649458add93cf28f8398, type: 3}
+  m_PrefabInstance: {fileID: 1835119808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdb22fb1754f6a43a2969422a355144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1908253372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3177054356915566053, guid: 2bceef5af71519f41b37e479cf64e312, type: 3}
@@ -611854,7 +611881,7 @@ PrefabInstance:
     - target: {fileID: 6789527340970488049, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: bossTrigger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1313118872}
     - target: {fileID: 6789527340970488049, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: gameHandler
       value: 
