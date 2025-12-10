@@ -1,24 +1,23 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class FlashlightCursor : MonoBehaviour
 {
     public Transform flashlight;
     public static float distanceMultiplier;
-    public float distanceMultiplierStart = 6;
+    public float distanceMultiplierStart = 6f;
 
-    public float rotationSpeed = 30;
-    public float distance = 50;
+    public float rotationSpeed = 30f;
+    public float distance = 50f;
     public LineRenderer lineOfSight;
-    public UnityEngine.Rendering.Universal.Light2D Glow;
+    public Light2D Glow;
     public Gradient redColor;
     public Gradient greenColor;
 
-    bool lightsOn = false;
-
+    private bool lightsOn = false;
     private float energyTimer = 0f;
-
     public GameObject lastHitObject;
 
     // AudioSources for flashlight on/off
@@ -35,108 +34,118 @@ public class FlashlightCursor : MonoBehaviour
 
     void Update()
     {
-        // Prevent turning on flashlight if player is dead
+        HandleFlashlightToggle();
+        HandleEnergyDrain();
+        HandleRaycast();
+    }
+
+    private void HandleFlashlightToggle()
+    {
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (GameHandler.playerHealth <= 0)
             {
                 Debug.Log("Cannot turn on flashlight — player is dead!");
+                return;
+            }
+
+            // Toggle flashlight state
+            lightsOn = !lightsOn;
+            lineOfSight.gameObject.SetActive(lightsOn);
+            Glow.gameObject.SetActive(lightsOn);
+
+            // Play sound on manual toggle
+            if (lightsOn)
+            {
+                if (flashlightOnSound != null) flashlightOnSound.Stop(); // prevent stacking
+                flashlightOnSound?.Play();
             }
             else
             {
-                lightsOn = !lightsOn;
-
-                // Play the appropriate sound only when turning on
-                if (lightsOn && flashlightOnSound != null) flashlightOnSound.Play();
+                if (flashlightOffSound != null) flashlightOffSound.Stop(); // prevent stacking
+                flashlightOffSound?.Play();
             }
         }
 
-        // Automatically turn off flashlight and glow if player health is 0 (no sound)
+        // Auto turn-off if player is dead (silent)
         if (lightsOn && GameHandler.playerHealth <= 0)
         {
             lightsOn = false;
             lineOfSight.gameObject.SetActive(false);
             Glow.gameObject.SetActive(false);
-            lastHitObject = null; // Clear reference
+            lastHitObject = null;
             Debug.Log("Flashlight turned off — player is dead!");
         }
+    }
 
-        // Energy drain logic
-        if (lightsOn)
+    private void HandleEnergyDrain()
+    {
+        if (!lightsOn) return;
+
+        energyTimer += Time.deltaTime;
+
+        if (energyTimer >= 0.5f)
         {
-            energyTimer += Time.deltaTime;
+            energyTimer = 0f;
 
-            if (energyTimer >= 0.5f) 
+            if (GameHandler.gotTokens > 0)
             {
-                energyTimer = 0f;
-
-                if (GameHandler.gotTokens > 0)
-                {
-                    GameHandler.SpendTokens(1);
-                }
-                else
-                {
-                    lightsOn = false;
-                    lineOfSight.gameObject.SetActive(false);
-                    Glow.gameObject.SetActive(false);
-
-                    if (flashlightOffSound != null) flashlightOffSound.Play();
-
-                    lastHitObject = null; // Clear reference
-                    Debug.Log("Flashlight turned off — no energy left!");
-                }
+                GameHandler.SpendTokens(1);
+            }
+            else
+            {
+                // Auto-off due to no energy (silent)
+                lightsOn = false;
+                lineOfSight.gameObject.SetActive(false);
+                Glow.gameObject.SetActive(false);
+                lastHitObject = null;
+                Debug.Log("Flashlight turned off — no energy left!");
             }
         }
+    }
 
-        // FLASHLIGHT RAYCAST COLLISIONS
+    private void HandleRaycast()
+    {
+        if (!lightsOn) return;
+
         Vector2 direction = (flashlight.position - transform.position).normalized;
         Vector3 offsetVector = direction * distanceMultiplier;
         Vector2 lightDistance = flashlight.position + offsetVector;
 
         RaycastHit2D hit = Physics2D.Raycast(flashlight.position, direction, distance);
 
-        if (lightsOn)
+        lineOfSight.SetPosition(0, flashlight.position);
+
+        if (hit.collider != null)
         {
-            lineOfSight.gameObject.SetActive(true);
-            Glow.gameObject.SetActive(true);
+            Debug.DrawLine(flashlight.position, hit.point, Color.red);
+            lineOfSight.SetPosition(1, hit.point);
+            lineOfSight.colorGradient = redColor;
 
-            if (hit.collider != null)
+            if (hit.collider.gameObject != lastHitObject)
             {
-                Debug.DrawLine(flashlight.position, hit.point, Color.red);
-                lineOfSight.SetPosition(1, hit.point);
-                lineOfSight.colorGradient = redColor;
-
-                if (hit.collider.gameObject != lastHitObject)
+                if (lastHitObject != null)
                 {
-                    if (lastHitObject != null)
-                    {
-                        if (lastHitObject.CompareTag("Battery"))
-                            lastHitObject.GetComponent<PickUp>().disableBatteryPickup();
-                        if (lastHitObject.CompareTag("Enemy"))
-                            lastHitObject.GetComponent<EnemyMeleeDamage>().Flash_Unlit();
-                    }
+                    if (lastHitObject.CompareTag("Battery"))
+                        lastHitObject.GetComponent<PickUp>().disableBatteryPickup();
+                    if (lastHitObject.CompareTag("Enemy"))
+                        lastHitObject.GetComponent<EnemyMeleeDamage>().Flash_Unlit();
                 }
-
-                lastHitObject = hit.collider.gameObject;
-                if (hit.collider.CompareTag("Battery"))
-                    hit.collider.gameObject.GetComponent<PickUp>().enableBatteryForPickup();
-                if (hit.collider.CompareTag("Enemy"))
-                    hit.collider.gameObject.GetComponent<EnemyMeleeDamage>().Flash_Lit();
-            }
-            else
-            {
-                Debug.DrawLine(flashlight.position, lightDistance, Color.green);
-                lineOfSight.SetPosition(1, lightDistance);
-                lineOfSight.colorGradient = greenColor;
-                lastHitObject = null;
             }
 
-            lineOfSight.SetPosition(0, flashlight.position);
+            lastHitObject = hit.collider.gameObject;
+
+            if (hit.collider.CompareTag("Battery"))
+                hit.collider.GetComponent<PickUp>().enableBatteryForPickup();
+            if (hit.collider.CompareTag("Enemy"))
+                hit.collider.GetComponent<EnemyMeleeDamage>().Flash_Lit();
         }
         else
         {
-            lineOfSight.gameObject.SetActive(false);
-            Glow.gameObject.SetActive(false);
+            Debug.DrawLine(flashlight.position, lightDistance, Color.green);
+            lineOfSight.SetPosition(1, lightDistance);
+            lineOfSight.colorGradient = greenColor;
+            lastHitObject = null;
         }
     }
 }
