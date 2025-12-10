@@ -422,6 +422,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2006340140}
     - target: {fileID: 6789527340970488049, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: bossTrigger
+      value: 
+      objectReference: {fileID: 1313118872}
+    - target: {fileID: 6789527340970488049, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: gameHandler
       value: 
       objectReference: {fileID: 1241642227}
@@ -594060,6 +594064,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5fc82448fab1cd448ad3029738fa264, type: 3}
+--- !u!114 &1313118872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8631356119052231445, guid: e46153e7d936ad74a84b7d75d9c5f5f8, type: 3}
+  m_PrefabInstance: {fileID: 1166829814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c76435a293c55b43aa3f7ac2be31660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1318539159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1274889686004728794, guid: 4f8bedafa199e09428384b50f6131969, type: 3}
@@ -611775,6 +611790,10 @@ PrefabInstance:
       propertyPath: pSpawn
       value: 
       objectReference: {fileID: 2006340140}
+    - target: {fileID: 6789527340970488049, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
+      propertyPath: bossTrigger
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6789527340970488049, guid: 9e07abf57131f164397b9d8cf3a0815c, type: 3}
       propertyPath: gameHandler
       value: 

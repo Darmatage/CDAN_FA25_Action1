@@ -8,16 +8,16 @@ public class AudioInterrupt : MonoBehaviour {
         private float stopTimestamp = 12.5f;
        
         void Update(){
-                if (Input.GetKeyDown("i")) {
-                        PlayMusicAtBegin();
-                }
-                if (Input.GetKeyDown("o")) {
-                        StopMusic();
-                }
-                if (Input.GetKeyDown("p")) {
-                        PlayMusicAtTime(stopTimestamp);
-                }
-        }
+               // if (Input.GetKeyDown("i")) {
+                      //  PlayMusicAtBegin();
+               // }
+              //  if (Input.GetKeyDown("o")) {
+                     //  StopMusic();
+              //  }
+               // if (Input.GetKeyDown("p")) {
+                       // PlayMusicAtTime(stopTimestamp);
+               // }
+       }
 
         public void PlayMusicAtBegin(){
                 audioSource.time = 0.0f;

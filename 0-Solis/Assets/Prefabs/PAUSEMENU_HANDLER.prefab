@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[esc]'
+  m_text: '[p]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c05b484af2f05aa4abbcaabd4176ec4a, type: 2}
   m_sharedMaterial: {fileID: 4670871478133481569, guid: c05b484af2f05aa4abbcaabd4176ec4a, type: 2}

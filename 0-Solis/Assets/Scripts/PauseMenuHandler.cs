@@ -20,16 +20,35 @@ public class PauseMenuHandler : MonoBehaviour
     public AudioClip pauseSFX;        // Sound played on pause/resume toggle
 
     void Awake()
-    {
+{
+    // Set initial volume
+    if (mixer != null)
         SetLevel(volumeLevel);
+    else
+        Debug.LogWarning("AudioMixer not assigned in PauseMenuHandler");
 
-        GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-        if (sliderTemp != null)
+    // Search for slider inside pauseMenuUI
+    if (pauseMenuUI != null)
+    {
+        sliderVolumeCtrl = pauseMenuUI.GetComponentInChildren<Slider>();
+        if (sliderVolumeCtrl != null)
         {
-            sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
             sliderVolumeCtrl.value = volumeLevel;
+
+            // Optional: hook slider change to SetLevel automatically
+            sliderVolumeCtrl.onValueChanged.AddListener(SetLevel);
+        }
+        else
+        {
+            Debug.LogWarning("No Slider found inside PauseMenuUI!");
         }
     }
+    else
+    {
+        Debug.LogWarning("PauseMenuUI not assigned in PauseMenuHandler!");
+    }
+}
+
 
     void Start()
     {
@@ -39,7 +58,7 @@ public class PauseMenuHandler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             PlayPauseSound();
             if (GameisPaused) Resume();

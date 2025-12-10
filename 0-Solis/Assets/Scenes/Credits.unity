@@ -1094,7 +1094,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -28}
-  m_SizeDelta: {x: 800, y: 200}
+  m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194495190
 MonoBehaviour:
@@ -1120,7 +1120,10 @@ MonoBehaviour:
 
     Zade Hussein
 
-    Jordan Kearney'
+    Jordan Kearney
+
+    all music score
+    by Parker Lipshutz'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c05b484af2f05aa4abbcaabd4176ec4a, type: 2}
   m_sharedMaterial: {fileID: 4670871478133481569, guid: c05b484af2f05aa4abbcaabd4176ec4a, type: 2}
@@ -1916,6 +1919,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 616062184324573251, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217477474133888390, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2695413520689034812, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1996,11 +2007,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4357080446660497586, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4642001501654226894, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_Name
       value: PAUSEMENU_HANDLER
       objectReference: {fileID: 0}
     - target: {fileID: 4642001501654226894, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892420545328065275, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

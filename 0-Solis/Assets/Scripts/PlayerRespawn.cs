@@ -127,6 +127,7 @@ public class PlayerRespawn : MonoBehaviour
         if (bossTrigger != null)
 {
     bossTrigger.ResetBosses();
+     Debug.Log("player sent the signal to the trigger");
 }
 
         isDead = false;

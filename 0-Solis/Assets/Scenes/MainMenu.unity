@@ -908,8 +908,8 @@ RectTransform:
   - {fileID: 49268164}
   - {fileID: 776441945}
   - {fileID: 1871241270}
-  - {fileID: 869700785}
   - {fileID: 2113093145}
+  - {fileID: 869700785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2222,6 +2222,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 616062184324573251, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217477474133888390, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2695413520689034812, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2302,11 +2310,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4357080446660497586, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4642001501654226894, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_Name
       value: PAUSEMENU_HANDLER
       objectReference: {fileID: 0}
     - target: {fileID: 4642001501654226894, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892420545328065275, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
