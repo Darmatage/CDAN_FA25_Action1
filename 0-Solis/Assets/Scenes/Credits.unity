@@ -1336,38 +1336,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 164348549931501913, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
     - target: {fileID: 959688004049772367, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1023792552690339208, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
     - target: {fileID: 2107984949868171815, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2107984949868171815, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
-    - target: {fileID: 4281181392923110532, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
     - target: {fileID: 4507197864403671219, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5035925919240420745, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
     - target: {fileID: 5421784108881018613, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1412,10 +1392,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8947517953631569483, guid: 86012561759a85540b1d14b00b43de5e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
