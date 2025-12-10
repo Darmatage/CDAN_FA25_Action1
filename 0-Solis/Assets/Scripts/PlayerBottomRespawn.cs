@@ -1,44 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBottomRespawn : MonoBehaviour
 {
     public GameHandler gameHandler;
-    public Transform playerPos;
-    public Transform pSpawnFall;
-    public int damage = 10;
+    private Transform playerPos;
 
-    private bool canKill = true;   // <-- changed
-
-    [Header("Cooldown")]
-    public float killCooldown = 1f; // 1 second wait between kill checks
+    private bool canKill = true; // Prevent multiple triggers
 
     void Start()
     {
-        playerPos = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+            playerPos = player.transform;
+
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 
     void Update()
     {
-        if (playerPos == null) return;
+        if (playerPos == null || !canKill) return;
 
-        pSpawnFall = playerPos.GetComponent<PlayerRespawn>().pSpawn;
-
-        if (canKill && transform.position.y >= playerPos.position.y)
+        // Trigger if player falls below the floor
+        if (playerPos.position.y <= transform.position.y)
         {
-            Debug.Log("Kill floor triggered");
+            Debug.Log("Kill floor triggered — setting player health to 0!");
             canKill = false;
+
+            // Set health to 0 directly
+            GameHandler.playerHealth = 0;
+
+            // Update UI and trigger death
+            gameHandler.updateStatsDisplay();
             gameHandler.playerDies();
-
-            StartCoroutine(KillCooldownTimer());
         }
-    }
-
-    IEnumerator KillCooldownTimer()
-    {
-        yield return new WaitForSeconds(killCooldown);
-        canKill = true; // <-- ready to kill again after 1 sec
     }
 }
