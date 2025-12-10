@@ -3,11 +3,14 @@ using UnityEngine;
 // Needed for Light2D
 using UnityEngine.Rendering.Universal;
 
+
 public class PlayerRespawn : MonoBehaviour
 {
     [Header("References")]
+    public Enemy_BossTrigger bossTrigger;
     public GameHandler gameHandler;
     public Transform pSpawn;
+    //public bool BossExists = false;
 
     [Header("Death Settings")]
     public Animator playerAnimator;
@@ -120,6 +123,11 @@ public class PlayerRespawn : MonoBehaviour
         GameHandler.playerHealth = gameHandler.StartPlayerHealth;
         if (gameHandler != null)
             gameHandler.updateStatsDisplay();
+
+        if (bossTrigger != null)
+{
+    bossTrigger.ResetBosses();
+}
 
         isDead = false;
     }
