@@ -138,5 +138,5 @@ MonoBehaviour:
   - {fileID: 426268365582365121, guid: b193636c20ec26840b45c1f44433cc9b, type: 3}
   target: {fileID: 0}
   camSpeed: 4
-  leftOffset: 5
+  leftOffset: 15
   heightOffset: 4

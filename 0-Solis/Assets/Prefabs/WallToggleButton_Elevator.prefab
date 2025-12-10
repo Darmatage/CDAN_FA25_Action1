@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 430341558718821661}
   - component: {fileID: 8157258578612389310}
-  - component: {fileID: 973884827471896231}
   - component: {fileID: 5877663014096118743}
   m_Layer: 0
   m_Name: WallToggleButton_Elevator
@@ -85,29 +84,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3027266, y: 4.2835274}
   m_EdgeRadius: 0
---- !u!114 &973884827471896231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596846708471403960}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e4800020eb22114d90426d77151af0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channel: 0
-  wallList: []
-  disablerList: []
-  buttonUp: {fileID: 7730174971779936013}
-  buttonDown: {fileID: 5571703360593610260}
-  snapToNearestGridSpace: 1
-  audioSource: {fileID: 5739326001401769358}
-  soundOn: {fileID: 8300000, guid: 11094215141c37a46a7f743e077d6bab, type: 3}
-  soundOff: {fileID: 8300000, guid: 1122c42227f3405419a193ab052a17ec, type: 3}
-  onLight: {fileID: 4785736034563903459}
-  offLight: {fileID: 1970323480231680829}
 --- !u!114 &5877663014096118743
 MonoBehaviour:
   m_ObjectHideFlags: 0

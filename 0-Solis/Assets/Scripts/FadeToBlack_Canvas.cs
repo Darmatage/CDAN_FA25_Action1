@@ -37,6 +37,6 @@ public class FadeToBlack_Canvas : MonoBehaviour
 
 	public void NextLevel()
     {
-        SceneManager.LoadScene("nextLevel");
+        SceneManager.LoadScene(nextLevel);
     }
 }
