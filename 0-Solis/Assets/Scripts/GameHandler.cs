@@ -225,7 +225,7 @@ public class GameHandler : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level_1");
     }
 
     public void RestartGame()
