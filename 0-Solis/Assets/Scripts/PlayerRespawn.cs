@@ -22,6 +22,7 @@ public class PlayerRespawn : MonoBehaviour
     [Header("Lights to Toggle on Death")]
     public Light2D light1;
     public Light2D light2;
+    public Light2D light3; // NEW third light
 
     private bool isDead = false;
 
@@ -34,6 +35,7 @@ public class PlayerRespawn : MonoBehaviour
             if (ghObj != null)
                 gameHandler = ghObj.GetComponent<GameHandler>();
         }
+        if (light3 != null) light3.enabled = false;
     }
 
     void Update()
@@ -62,6 +64,7 @@ public class PlayerRespawn : MonoBehaviour
         // Disable lights
         if (light1 != null) light1.enabled = false;
         if (light2 != null) light2.enabled = false;
+        if (light3 != null) light3.enabled = true; // NEW
 
         // Disable movement
         PlayerMove move = GetComponent<PlayerMove>();
@@ -104,6 +107,7 @@ public class PlayerRespawn : MonoBehaviour
         if (sprite2 != null) sprite2.enabled = true;
         if (light1 != null) light1.enabled = true;
         if (light2 != null) light2.enabled = true;
+        if (light3 != null) light3.enabled = false; // NEW
 
         // Trigger respawn animation
         if (playerAnimator != null) playerAnimator.SetTrigger("Respawned");

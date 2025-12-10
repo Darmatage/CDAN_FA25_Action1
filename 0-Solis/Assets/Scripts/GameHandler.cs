@@ -14,8 +14,6 @@ public class GameHandler : MonoBehaviour
     public static int Lives;
     public int maxLives = 5;
     private PlayerRespawn playerRespawn;
-    
-
 
     public GameObject textLives;
 
@@ -25,55 +23,57 @@ public class GameHandler : MonoBehaviour
     public bool isDefending = false;
 
     public static bool stairCaseUnlocked = false;
-    //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
 
     private string sceneName;
-    public static string lastLevelDied; //allows replaying the Level where you died
+    public static string lastLevelDied;
 
     // Battery meter images (9 public slots)
-    public Image battery0; // 0-11%
-    public Image battery1; // 12-23%
-    public Image battery2; // 24-34%
-    public Image battery3; // 35-45%
-    public Image battery4; // 46-56%
-    public Image battery5; // 57-67%
-    public Image battery6; // 68-78%
-    public Image battery7; // 79-89%
-    public Image battery8; // 90-100%
+    public Image battery0;
+    public Image battery1;
+    public Image battery2;
+    public Image battery3;
+    public Image battery4;
+    public Image battery5;
+    public Image battery6;
+    public Image battery7;
+    public Image battery8;
 
     // --- New: Reference to zero-energy UI effect
-    public GameHandlerZeroEnergy zeroEnergyUIEffect; // assign in inspector
+    public GameHandlerZeroEnergy zeroEnergyUIEffect;
+
+    // --- New: Damage flash settings ---
+    public Image damageFlashImage; // assign in inspector
+    public float flashDuration = 0.2f; // total flash time (fade in + fade out)
 
     void Start()
-{
-    sceneName = SceneManager.GetActiveScene().name;
-
-    player = GameObject.FindWithTag("Player");
-
-    // If no player exists (Main Menu, Credits, etc), stop here
-    if (player == null)
     {
-        Debug.Log("No player found in this scene. GameHandler running in non-gameplay scene.");
-        return;
+        sceneName = SceneManager.GetActiveScene().name;
+
+        player = GameObject.FindWithTag("Player");
+
+        // If no player exists (Main Menu, Credits, etc), stop here
+        if (player == null)
+        {
+            Debug.Log("No player found in this scene. GameHandler running in non-gameplay scene.");
+            return;
+        }
+
+        // Gameplay-only setup
+        playerHealth = StartPlayerHealth;
+
+        playerRespawn = player.GetComponent<PlayerRespawn>();
+
+        if (Lives <= 0)
+            Lives = maxLives;
+
+        updateStatsDisplay();
     }
-
-    // Gameplay-only setup
-    playerHealth = StartPlayerHealth;
-
-    playerRespawn = player.GetComponent<PlayerRespawn>();
-
-    if (Lives <= 0)
-        Lives = maxLives;
-
-    updateStatsDisplay();
-}
 
     public void playerGetTokens(int newTokens)
     {
         gotTokens += newTokens;
         updateStatsDisplay();
 
-        // Stop zero energy sequence if energy is regained
         if (gotTokens > 0 && zeroEnergyUIEffect != null)
         {
             zeroEnergyUIEffect.StopZeroEnergySequence();
@@ -91,8 +91,12 @@ public class GameHandler : MonoBehaviour
             }
             if (damage > 0)
             {
-                //play GetHit animation:
+                // Play GetHit animation
                 player.GetComponent<PlayerHurt>().playerHit();
+
+                // Trigger damage flash
+                if (damageFlashImage != null)
+                    StartCoroutine(DamageFlashCoroutine());
             }
         }
 
@@ -108,20 +112,17 @@ public class GameHandler : MonoBehaviour
             updateStatsDisplay();
             playerDies();
         }
-        
-        
     }
-     
 
     public static void SpendTokens(int amount)
     {
-        gotTokens = Mathf.Max(0, gotTokens - amount);    // prevent negatives
+        gotTokens = Mathf.Max(0, gotTokens - amount);
         FindObjectOfType<GameHandler>().updateStatsDisplay();
     }
 
     public static void GainTokens(int amount)
     {
-        gotTokens = Mathf.Min(100, gotTokens + amount);    // prevent over 100
+        gotTokens = Mathf.Min(100, gotTokens + amount);
         FindObjectOfType<GameHandler>().updateStatsDisplay();
     }
 
@@ -131,7 +132,7 @@ public class GameHandler : MonoBehaviour
         tokensText.text = "ENERGY: " + gotTokens;
         textLives.GetComponent<TMP_Text>().text = "LIVES: " + Lives;
 
-        // Update battery meter images based on gotTokens
+        // Update battery meter images
         battery0.enabled = battery1.enabled = battery2.enabled = battery3.enabled = battery4.enabled =
         battery5.enabled = battery6.enabled = battery7.enabled = battery8.enabled = false;
 
@@ -154,7 +155,7 @@ public class GameHandler : MonoBehaviour
         else
             battery8.enabled = true;
 
-        // --- New: Trigger zero energy sequence ---
+        // Trigger zero energy sequence
         if (gotTokens <= 0 && zeroEnergyUIEffect != null)
         {
             zeroEnergyUIEffect.StartZeroEnergySequence();
@@ -162,85 +163,82 @@ public class GameHandler : MonoBehaviour
     }
 
     public void playerDies()
-{
-    //Lives--; // lose a life
-
-    if (zeroEnergyUIEffect != null)
-    zeroEnergyUIEffect.StopZeroEnergySequence();
-
-    if (Lives <= 0)
     {
-        Lives = 0;
-        updateStatsDisplay();
-        SceneManager.LoadScene("EndLose");
-        return;
+        if (zeroEnergyUIEffect != null)
+            zeroEnergyUIEffect.StopZeroEnergySequence();
+
+        if (Lives <= 0)
+        {
+            Lives = 0;
+            updateStatsDisplay();
+            SceneManager.LoadScene("EndLose");
+            return;
+        }
+
+        // still have lives, so respawn instead of reload
+        StartCoroutine(RespawnPlayer());
     }
 
-    // still have lives, so respawn instead of reload
-    StartCoroutine(RespawnPlayer());
-}
+    IEnumerator RespawnPlayer()
+    {
+        if (zeroEnergyUIEffect != null)
+            zeroEnergyUIEffect.StopZeroEnergySequence();
 
-IEnumerator RespawnPlayer()
-{
-    if (zeroEnergyUIEffect != null)
-    zeroEnergyUIEffect.StopZeroEnergySequence();
-    
-    //player.GetComponent<PlayerMove>().isAlive = false;
-    //player.GetComponent<PlayerJump>().isAlive = false;
-    gotTokens = 100;
+        gotTokens = 100;
 
-    yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
 
-    // reset stats
-    //playerHealth = StartPlayerHealth;
-    updateStatsDisplay();
+        updateStatsDisplay();
+    }
 
-    // teleport player to their checkpoint
-    //if (playerRespawn.pSpawn != null)
-    //{
-    //    player.transform.position = playerRespawn.pSpawn.position;
-    //}
-    //else
-    //{
-    //    Debug.LogWarning("No spawn point set yet!");
-    //}
+    private IEnumerator DamageFlashCoroutine()
+    {
+        float halfDuration = flashDuration / 1.25f;
 
-    // re-enable controls
-    //player.GetComponent<PlayerMove>().isAlive = true;
-    //player.GetComponent<PlayerJump>().isAlive = true;
-}
+        // Fade in
+        Color color = damageFlashImage.color;
+        color.a = 0f;
+        damageFlashImage.color = color;
 
-   // IEnumerator DeathPause()
-   // {
-   // player.GetComponent<PlayerMove>().isAlive = false;
-   // player.GetComponent<PlayerJump>().isAlive = false;
-   // gotTokens = 100;
+        float timer = 0f;
+        while (timer < halfDuration)
+        {
+            timer += Time.deltaTime;
+            color.a = Mathf.Lerp(0f, 1f, timer / halfDuration);
+            damageFlashImage.color = color;
+            yield return null;
+        }
 
-   // yield return new WaitForSeconds(1f);
+        // Fade out
+        timer = 0f;
+        while (timer < halfDuration)
+        {
+            timer += Time.deltaTime;
+            color.a = Mathf.Lerp(1f, 0f, timer / halfDuration);
+            damageFlashImage.color = color;
+            yield return null;
+        }
 
-   // SceneManager.LoadScene(lastLevelDied);  // reload instead
-   // }
+        color.a = 0f;
+        damageFlashImage.color = color;
+    }
 
     public void StartGame()
     {
         SceneManager.LoadScene("Level2");
     }
 
-    // Return to MainMenu
     public void RestartGame()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-        // Reset all static variables here, for new games:
         playerHealth = StartPlayerHealth;
     }
 
-    // Replay the Level where you died
     public void ReplayLastLevel()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(lastLevelDied);
-        // Reset all static variables here, for new games:
         playerHealth = StartPlayerHealth;
     }
 
