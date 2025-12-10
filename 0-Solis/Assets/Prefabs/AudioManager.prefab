@@ -92,11 +92,11 @@ AudioSource:
   m_GameObject: {fileID: 4507197864403671219}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0c4f83a8b88d7204a9512be64d21c5b2, type: 3}
   m_Resource: {fileID: 8300000, guid: 0c4f83a8b88d7204a9512be64d21c5b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -110,7 +110,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -221,11 +221,11 @@ AudioSource:
   m_GameObject: {fileID: 7432120671256918552}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7ee06077d83000e44b8105828f794b9c, type: 3}
   m_Resource: {fileID: 8300000, guid: 7ee06077d83000e44b8105828f794b9c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -239,7 +239,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -350,11 +350,11 @@ AudioSource:
   m_GameObject: {fileID: 7686398241915600061}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8e6b4c9f7e292794ba4114452b90ac59, type: 3}
   m_Resource: {fileID: 8300000, guid: 8e6b4c9f7e292794ba4114452b90ac59, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -368,7 +368,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -479,11 +479,11 @@ AudioSource:
   m_GameObject: {fileID: 7931929038926180325}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4c71221994f34b740b04a3524505e090, type: 3}
   m_Resource: {fileID: 8300000, guid: 4c71221994f34b740b04a3524505e090, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -497,7 +497,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -608,11 +608,11 @@ AudioSource:
   m_GameObject: {fileID: 8227595814475861892}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
   m_audioClip: {fileID: 8300000, guid: 58d190873786ae54c83b02aef8cc32a9, type: 3}
   m_Resource: {fileID: 8300000, guid: 58d190873786ae54c83b02aef8cc32a9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -626,7 +626,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -737,11 +737,11 @@ AudioSource:
   m_GameObject: {fileID: 8968328581677099678}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9690c52367577644291551aa273122ca, type: 2}
   m_audioClip: {fileID: 8300000, guid: 655b24960521fe64a9a840a7b2e86634, type: 3}
   m_Resource: {fileID: 8300000, guid: 655b24960521fe64a9a840a7b2e86634, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -755,7 +755,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
