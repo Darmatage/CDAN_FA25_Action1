@@ -163,7 +163,7 @@ public class GameHandler : MonoBehaviour
 
     public void playerDies()
 {
-    Lives--; // lose a life
+    //Lives--; // lose a life
 
     if (zeroEnergyUIEffect != null)
     zeroEnergyUIEffect.StopZeroEnergySequence();
@@ -185,41 +185,41 @@ IEnumerator RespawnPlayer()
     if (zeroEnergyUIEffect != null)
     zeroEnergyUIEffect.StopZeroEnergySequence();
     
-    player.GetComponent<PlayerMove>().isAlive = false;
-    player.GetComponent<PlayerJump>().isAlive = false;
+    //player.GetComponent<PlayerMove>().isAlive = false;
+    //player.GetComponent<PlayerJump>().isAlive = false;
     gotTokens = 100;
 
     yield return new WaitForSeconds(1f);
 
     // reset stats
-    playerHealth = StartPlayerHealth;
+    //playerHealth = StartPlayerHealth;
     updateStatsDisplay();
 
     // teleport player to their checkpoint
-    if (playerRespawn.pSpawn != null)
-    {
-        player.transform.position = playerRespawn.pSpawn.position;
-    }
-    else
-    {
-        Debug.LogWarning("No spawn point set yet!");
-    }
+    //if (playerRespawn.pSpawn != null)
+    //{
+    //    player.transform.position = playerRespawn.pSpawn.position;
+    //}
+    //else
+    //{
+    //    Debug.LogWarning("No spawn point set yet!");
+    //}
 
     // re-enable controls
-    player.GetComponent<PlayerMove>().isAlive = true;
-    player.GetComponent<PlayerJump>().isAlive = true;
+    //player.GetComponent<PlayerMove>().isAlive = true;
+    //player.GetComponent<PlayerJump>().isAlive = true;
 }
 
-    IEnumerator DeathPause()
-    {
-    player.GetComponent<PlayerMove>().isAlive = false;
-    player.GetComponent<PlayerJump>().isAlive = false;
-    gotTokens = 100;
+   // IEnumerator DeathPause()
+   // {
+   // player.GetComponent<PlayerMove>().isAlive = false;
+   // player.GetComponent<PlayerJump>().isAlive = false;
+   // gotTokens = 100;
 
-    yield return new WaitForSeconds(1f);
+   // yield return new WaitForSeconds(1f);
 
-    SceneManager.LoadScene(lastLevelDied);  // reload instead
-    }
+   // SceneManager.LoadScene(lastLevelDied);  // reload instead
+   // }
 
     public void StartGame()
     {

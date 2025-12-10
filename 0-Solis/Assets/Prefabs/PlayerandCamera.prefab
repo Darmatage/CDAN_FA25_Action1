@@ -3649,3 +3649,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
   pSpawn: {fileID: 0}
+  playerAnimator: {fileID: 7377040545897975454}
+  audioSource: {fileID: 7526688577393449550}
+  deathSound: {fileID: 8300000, guid: bc45e6ea75516b547a53da894e174c12, type: 3}
+  tickSound: {fileID: 8300000, guid: 11094215141c37a46a7f743e077d6bab, type: 3}
+  sprite1: {fileID: 5871418087283652448}
+  sprite2: {fileID: 7182197363299055164}
+  light1: {fileID: 1574565215677032381}
+  light2: {fileID: 2815729981944223548}

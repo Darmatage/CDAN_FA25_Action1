@@ -185,6 +185,7 @@ public class GameHandlerZeroEnergy : MonoBehaviour
         zeroEnergyRunning = false;
         //StopZeroEnergySequence();
         FindObjectOfType<GameHandler>().playerDies();
+        FindObjectOfType<GameHandler>().playerGetHit(500);
     }
 
     private IEnumerator FadeOverlayTrio(OverlayTrio trio, bool fadeIn)
