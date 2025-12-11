@@ -260,4 +260,19 @@ public class GameHandler : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void Level_1()
+    {
+        SceneManager.LoadScene("Level_1");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void Level3_Mines()
+    {
+        SceneManager.LoadScene("Level3_Mines");
+    }
 }

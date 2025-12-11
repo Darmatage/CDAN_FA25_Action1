@@ -37,7 +37,7 @@ public class PickUp : MonoBehaviour
 
             if (isTokenPickUp == true)
             {
-                GameHandler.GainTokens(20);
+                GameHandler.GainTokens(40);
                 //playerPowerupVFX.powerup();
             }
         }

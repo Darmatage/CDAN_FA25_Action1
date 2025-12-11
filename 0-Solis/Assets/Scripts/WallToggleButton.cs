@@ -69,12 +69,12 @@ public class WallToggleButton : MonoBehaviour
             }
 
             // Disable channel objects(old)
-            /*
+            
 			foreach (ChannelDisabler disabler in disablerList)
             {
                 disabler.DisableObject();
             }
-			*/
+			
 
             // Play sound
             if (audioSource != null)

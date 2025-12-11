@@ -41,7 +41,7 @@ public class PlayerAttackShoot : MonoBehaviour
                 {
                     playerFire();
                     nextAttackTime = Time.time + 1f / attackRate;
-                    GameHandler.SpendTokens(10);
+                    GameHandler.SpendTokens(8);
                 }
                 else
                 {
