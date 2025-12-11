@@ -112,11 +112,11 @@ public class PauseMenuHandler : MonoBehaviour
     public void QuitGame()
     {
     SceneManager.LoadScene("MainMenu");
-//#if UNITY_EDITOR
-//        UnityEditor.EditorApplication.isPlaying = false;
-//#else
-//        Application.Quit();
-//#endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 
     private void PlayPauseSound()
