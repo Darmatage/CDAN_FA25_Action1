@@ -129,9 +129,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 512
-        height: 384
+        y: 320
+        width: 64
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,11 +147,99 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MineshaftExitBackground_12
+      name: MineshaftExitBackground_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aba8fdd60a545242bb49b6a74cd19b4
+      internalID: -3022810900729122162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4620fe40b615744ac86bd4781a9684
+      internalID: -5294602745678587201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f22587682e7da44a4677df7050930c
+      internalID: 982666641938484670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b12499350722b43b1a4e77e3b4816c
+      internalID: -440015717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_21
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 192
         width: 128
         height: 128
       alignment: 0
@@ -162,14 +250,168 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79b738201bdd59b4bb4acd4414743688
-      internalID: -1086199916
+      spriteID: 301f9ffdff8abb346a21bd86083234c0
+      internalID: -1043728186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MineshaftExitBackground_13
+      name: MineshaftExitBackground_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d885165ca4b268749b07469f67bfe8dd
+      internalID: -198873904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 127
+        width: 128
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd518882fb519e64595b6a0619065fd1
+      internalID: 958901444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ddc944f243be24fa89188ba6f2e585
+      internalID: -376048509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692ed6bdc08505f419ab12beb3fc3a3c
+      internalID: -679422972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ddae93f1fe04344af8a5235d000d1a
+      internalID: -612577151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_38
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde1e97563d9bfe4fa416bede7778b93
+      internalID: 1823588620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e04e5149c5b7a4582aa0b768d5202b
+      internalID: -923976658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_42
       rect:
         serializedVersion: 2
         x: 128
@@ -184,20 +426,108 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b8869f18a582de468c4894762d993ad
-      internalID: -1569188019
+      spriteID: 5f0eef8484555b944be037004476572a
+      internalID: -811702055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MineshaftExitBackground_14
+      name: MineshaftExitBackground_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085058308a228cb4590d1307c97dddb9
+      internalID: 1787830757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f989a5f83ddf14d4681d54d28d5b556c
+      internalID: -1960003626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_45
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af26340ad1f770a448b2e6ba4c5c803f
+      internalID: -1089911297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c007b6e9f9049b40bfc4fad1e894be4
+      internalID: -1163614871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_51
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +536,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b33ab2d93b55c141bb6158a9c33efd2
-      internalID: -171163472
+      spriteID: 87ba9a2e1d6b7634ba2093da9060b7b2
+      internalID: 1420300431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MineshaftExitBackground_15
+      name: MineshaftExitBackground_52
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +558,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee19ebab894f67a47ad79d55ca249785
-      internalID: -605244047
+      spriteID: 6ce2f8703cec237499c632d36ef2850a
+      internalID: -2046525866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49ea3f9141664641b4b579ebea31536
+      internalID: 1990383876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineshaftExitBackground_54
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab725420aa54bf843916bd4391d4a830
+      internalID: -444343306
       vertices: []
       indices: 
       edges: []
@@ -256,10 +630,49 @@ TextureImporter:
       MineshaftExitBackground_13: -1569188019
       MineshaftExitBackground_14: -171163472
       MineshaftExitBackground_15: -605244047
+      MineshaftExitBackground_16: 628125997
+      MineshaftExitBackground_17: -1283442620
+      MineshaftExitBackground_18: 1352536087
+      MineshaftExitBackground_19: 984981504
       MineshaftExitBackground_2: -8723366532642912805
+      MineshaftExitBackground_20: 1328952929
+      MineshaftExitBackground_21: -1043728186
+      MineshaftExitBackground_22: 1284700367
+      MineshaftExitBackground_23: -198873904
+      MineshaftExitBackground_24: -1631548358
+      MineshaftExitBackground_25: 958901444
+      MineshaftExitBackground_26: 1329919418
+      MineshaftExitBackground_27: -583967267
+      MineshaftExitBackground_28: -251329330
+      MineshaftExitBackground_29: 49349075
       MineshaftExitBackground_3: -5294602745678587201
+      MineshaftExitBackground_30: 1951574093
+      MineshaftExitBackground_31: 2145518138
+      MineshaftExitBackground_32: -1705794572
+      MineshaftExitBackground_33: -376048509
+      MineshaftExitBackground_34: -679422972
+      MineshaftExitBackground_35: 418399121
+      MineshaftExitBackground_36: -1897680140
+      MineshaftExitBackground_37: -612577151
+      MineshaftExitBackground_38: 1823588620
+      MineshaftExitBackground_39: -923976658
       MineshaftExitBackground_4: 982666641938484670
+      MineshaftExitBackground_40: -412613305
+      MineshaftExitBackground_41: -850355595
+      MineshaftExitBackground_42: -811702055
+      MineshaftExitBackground_43: 1787830757
+      MineshaftExitBackground_44: -1960003626
+      MineshaftExitBackground_45: -1089911297
+      MineshaftExitBackground_46: -1163614871
+      MineshaftExitBackground_47: -2016819738
+      MineshaftExitBackground_48: 1291916842
+      MineshaftExitBackground_49: -1500006714
       MineshaftExitBackground_5: -1373384341
+      MineshaftExitBackground_50: -1898469671
+      MineshaftExitBackground_51: 1420300431
+      MineshaftExitBackground_52: -2046525866
+      MineshaftExitBackground_53: 1990383876
+      MineshaftExitBackground_54: -444343306
       MineshaftExitBackground_6: -440015717
       MineshaftExitBackground_7: -558414594
       MineshaftExitBackground_8: 1209618800
