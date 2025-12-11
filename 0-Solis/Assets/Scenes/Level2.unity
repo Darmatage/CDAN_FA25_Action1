@@ -588640,6 +588640,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5233255264612331487, guid: 2701f517bb5500a4fa2c1b9585c00a26, type: 3}
+      propertyPath: leftOffset
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 7758403075039710248, guid: 2701f517bb5500a4fa2c1b9585c00a26, type: 3}
       propertyPath: m_Name
       value: CLOUD_MANAGER

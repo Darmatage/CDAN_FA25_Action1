@@ -226,6 +226,10 @@ public class GameHandler : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Level_1");
+        playerHealth = StartPlayerHealth;
+        gotTokens = 100;
+        Lives = 5;
+        updateStatsDisplay();
     }
 
     public void RestartGame()
@@ -233,6 +237,9 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
         playerHealth = StartPlayerHealth;
+        gotTokens = 100;
+        Lives = 5;
+        updateStatsDisplay();
     }
 
     public void ReplayLastLevel()
@@ -259,6 +266,12 @@ public class GameHandler : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        gotTokens = 100;
+        playerHealth = 100;
+        Lives = 5;
+        updateStatsDisplay();
+
+
     }
 
     public void Level_1()

@@ -503,6 +503,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343184690}
   m_CullTransparentMesh: 1
+--- !u!1 &486787005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486787008}
+  - component: {fileID: 486787007}
+  - component: {fileID: 486787006}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &486787006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486787005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &486787007
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486787005}
+  m_CullTransparentMesh: 1
+--- !u!224 &486787008
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486787005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870719827}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1681, y: 411}
+  m_SizeDelta: {x: 1280, y: 720}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &537358129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 287355802684235373, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
@@ -899,6 +974,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 343184691}
+  - {fileID: 486787008}
   - {fileID: 1076566947}
   - {fileID: 75010988}
   - {fileID: 342882400}
@@ -1127,39 +1203,39 @@ PrefabInstance:
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery0
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery4
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery5
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery6
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery7
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: battery8
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: textLives
       value: 
@@ -1172,6 +1248,10 @@ PrefabInstance:
       propertyPath: tokensText
       value: 
       objectReference: {fileID: 1871241268}
+    - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
+      propertyPath: damageFlashImage
+      value: 
+      objectReference: {fileID: 486787006}
     - target: {fileID: 6050958916334643605, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
       propertyPath: zeroEnergyUIEffect
       value: 
