@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class AudioInterrupt : MonoBehaviour {
+public class AudioManager : MonoBehaviour {
 
         public AudioSource audioSource;
         private float stopTimestamp = 12.5f;

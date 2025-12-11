@@ -3,11 +3,16 @@ using UnityEngine;
 public class MusicTrigger : MonoBehaviour
 {
     [Header("Audio Manager")]
-    public AudioInterrupt audioManager;        // The AudioInterrupt manager
+    public AudioManager audioManager;        // The AudioManager
     public string enterTrackName = "BossTrack"; // Track to play when player enters
     //public string exitTrackName = "NormalTrack"; // Track to play when player exits (optional)
 
     private bool hasTriggered = false;
+
+void Start()
+	{
+		audioManager = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
+	}
 
     private void OnTriggerEnter2D(Collider2D other)
     {

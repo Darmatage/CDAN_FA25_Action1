@@ -8,7 +8,7 @@ public class Enemy_BossTrigger : MonoBehaviour
     private bool hasTriggered = false;
 
     [Header("Audio Manager")]
-    public AudioInterrupt audioManager; // single AudioInterrupt with multiple tracks as children
+    public AudioManager audioManager; // single AudioInterrupt with multiple tracks as children
     public string bossTrackName = "BossTrack";      // name of the boss track child
     public string normalTrackName = "NormalTrack";  // name of the normal track child
 
