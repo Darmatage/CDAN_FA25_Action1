@@ -84,7 +84,7 @@ public class FlashlightCursor : MonoBehaviour
 
         energyTimer += Time.deltaTime;
 
-        if (energyTimer >= 0.5f)
+        if (energyTimer >= 0.75f)
         {
             energyTimer = 0f;
 
