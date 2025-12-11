@@ -286,6 +286,6 @@ public class GameHandler : MonoBehaviour
 
     public void Level3_Mines()
     {
-        SceneManager.LoadScene("Level3_Mines");
+        SceneManager.LoadScene("Level3_Mine");
     }
 }

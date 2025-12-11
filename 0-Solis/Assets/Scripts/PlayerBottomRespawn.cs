@@ -29,9 +29,24 @@ public class PlayerBottomRespawn : MonoBehaviour
             // Set health to 0 directly
             GameHandler.playerHealth = 0;
 
-            // Update UI and trigger death
             gameHandler.updateStatsDisplay();
             gameHandler.playerDies();
+
+            // Re-enable after 4 frames
+            StartCoroutine(ReEnableKill());
         }
+    }
+
+    private System.Collections.IEnumerator ReEnableKill()
+    {
+        // Wait exactly 4 frames
+        yield return null;
+        yield return null;
+        yield return null;
+        yield return null;
+        yield return null;
+        yield return null;
+
+        canKill = true;
     }
 }
