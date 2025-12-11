@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_text
       value: CREDITS
       objectReference: {fileID: 0}
+    - target: {fileID: 623209003441945080, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_Name
       value: Button_CREDITS
@@ -234,7 +238,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1383979415}
+    - targetCorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1383979416}
   m_SourcePrefab: {fileID: 100100000, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
 --- !u!224 &49268164 stripped
 RectTransform:
@@ -353,6 +363,11 @@ RectTransform:
   m_AnchoredPosition: {x: 325.5, y: 183}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &260578189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+  m_PrefabInstance: {fileID: 776441944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &342882399
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +598,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 287355802684235373, guid: 37da777391ab4f84995c2fc825e85dc2, type: 3}
   m_PrefabInstance: {fileID: 1079826727}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &676877730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+  m_PrefabInstance: {fileID: 793911353382915410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &684362204
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +752,10 @@ PrefabInstance:
       propertyPath: m_text
       value: QUIT
       objectReference: {fileID: 0}
+    - target: {fileID: 623209003441945080, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_Name
       value: Button_QUIT
@@ -835,13 +859,122 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 776441951}
+    - targetCorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 776441952}
   m_SourcePrefab: {fileID: 100100000, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
 --- !u!224 &776441945 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7279062900243750795, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
   m_PrefabInstance: {fileID: 776441944}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &776441951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260578189}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2c191a4e9ebc74699b3b1955c09012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: -3.14058
+      outSlope: -3.14058
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04000001
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.048069656
+      outSlope: -0.048069656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18666667
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curveAlpha:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 6.3310094
+      outSlope: 6.3310094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.049999993
+    - serializedVersion: 3
+      time: 0.4
+      value: 1
+      inSlope: 0.24401014
+      outSlope: 0.24401014
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.85392994
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isButton1: 0
+  isButton2: 0
+  isButton3: 1
+--- !u!114 &776441952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260578189}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43545782c0920c84196c5851e071c3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveMove:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.0563323
+      outSlope: -2.0563323
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05333333
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.19762164
+      outSlope: -0.19762164
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18666667
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isButton1: 0
+  isButton2: 0
+  isButton3: 1
+  isVertical: 0
 --- !u!1 &825410029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1738,114 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1383979409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+  m_PrefabInstance: {fileID: 49268163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1383979415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383979409}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2c191a4e9ebc74699b3b1955c09012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: -3.14058
+      outSlope: -3.14058
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04000001
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.048069656
+      outSlope: -0.048069656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18666667
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curveAlpha:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 6.3310094
+      outSlope: 6.3310094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.049999993
+    - serializedVersion: 3
+      time: 0.4
+      value: 1
+      inSlope: 0.24401014
+      outSlope: 0.24401014
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.85392994
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isButton1: 0
+  isButton2: 1
+  isButton3: 0
+--- !u!114 &1383979416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383979409}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43545782c0920c84196c5851e071c3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveMove:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.0563323
+      outSlope: -2.0563323
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05333333
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.19762164
+      outSlope: -0.19762164
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18666667
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isButton1: 0
+  isButton2: 1
+  isButton3: 0
+  isVertical: 0
 --- !u!1 &1433585904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,9 +2436,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870719827}
     m_Modifications:
+    - target: {fileID: 623209003441945080, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_Name
       value: Button_PLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2676254776104992406, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2298,13 +2547,122 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793911353382915417}
+    - targetCorrespondingSourceObject: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793911353382915418}
   m_SourcePrefab: {fileID: 100100000, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
 --- !u!224 &793911353382915411 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7279062900243750795, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
   m_PrefabInstance: {fileID: 793911353382915410}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &793911353382915417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676877730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2c191a4e9ebc74699b3b1955c09012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: -3.14058
+      outSlope: -3.14058
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04000001
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.048069656
+      outSlope: -0.048069656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18666667
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curveAlpha:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 6.3310094
+      outSlope: 6.3310094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.049999993
+    - serializedVersion: 3
+      time: 0.4
+      value: 1
+      inSlope: 0.24401014
+      outSlope: 0.24401014
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.85392994
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isButton1: 1
+  isButton2: 0
+  isButton3: 0
+--- !u!114 &793911353382915418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676877730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43545782c0920c84196c5851e071c3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveMove:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.0563323
+      outSlope: -2.0563323
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05333333
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.19762164
+      outSlope: -0.19762164
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18666667
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isButton1: 1
+  isButton2: 0
+  isButton3: 0
+  isVertical: 0
 --- !u!1001 &5788639439893190295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2384,7 +2742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217477474133888390, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2695413520689034812, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_Pivot.x
@@ -2468,7 +2826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357080446660497586, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4642001501654226894, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_Name
@@ -2477,6 +2835,10 @@ PrefabInstance:
     - target: {fileID: 4642001501654226894, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420897108522509905, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7892420545328065275, guid: 6f1d880d6cc66cc44995577c66c32ad3, type: 3}
       propertyPath: m_IsActive
