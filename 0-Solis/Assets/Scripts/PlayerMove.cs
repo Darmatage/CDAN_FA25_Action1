@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour {
            hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
 
            if (isAlive){
-                  transform.position += hMove * runSpeed * Time.deltaTime;
+                  
 
                   animator.SetBool("Walk", Input.GetAxis("Horizontal") != 0);
 
@@ -69,7 +69,12 @@ public class PlayerMove : MonoBehaviour {
       void FixedUpdate(){
             // Slow down on hills / stops sliding from velocity
             if (hMove.x == 0){
-                  rb2D.linearVelocity = new Vector2(rb2D.linearVelocity.x / 1.1f, rb2D.linearVelocity.y);
+                  
+                  rb2D.linearVelocity = new Vector2(rb2D.linearVelocity.x / 1.4f, rb2D.linearVelocity.y);
+                  
+            }
+            else if (isAlive){
+                  transform.position += hMove * runSpeed * Time.fixedDeltaTime;
             }
       }
 
