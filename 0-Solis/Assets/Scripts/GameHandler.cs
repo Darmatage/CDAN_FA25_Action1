@@ -225,7 +225,7 @@ public class GameHandler : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("Comic1");
         playerHealth = StartPlayerHealth;
         gotTokens = 100;
         Lives = 5;

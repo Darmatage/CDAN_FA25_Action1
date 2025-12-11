@@ -13,6 +13,7 @@ public class WallToggle_Elevator : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource audioSource;   // Drag an AudioSource here
+    public AudioSource movingSFX;
     public AudioClip soundOn;         // When wall goes up / becomes solid
     public AudioClip soundOff;        // When wall goes down / disabled
 
@@ -65,6 +66,7 @@ public class WallToggle_Elevator : MonoBehaviour
             wallDown.SetActive(true);
 			GetComponent<PlatformMoveWithPlayer>().enabled = true;
             GetComponent<BoxCollider2D>().enabled = true;
+            
 
             // Play ON sound
             if (audioSource != null && soundOn != null){

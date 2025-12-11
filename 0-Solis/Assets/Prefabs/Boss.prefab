@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4387196818972156226}
   - component: {fileID: 8873751564301465949}
   m_Layer: 6
-  m_Name: chirpSFX
+  m_Name: BossSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

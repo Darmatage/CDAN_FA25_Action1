@@ -135,13 +135,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_MENU
       objectReference: {fileID: 0}
+    - target: {fileID: 1925166003746960258, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2676254776104992406, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1079826728}
     - target: {fileID: 2676254776104992406, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Level2
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 2676254776104992406, guid: 0eb67c73293f47047a0ae45321cce566, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -328,14 +332,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1240515205025382843, guid: 78a4c7adf0038d34e8256cc8299cbec0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -370,6 +374,7 @@ GameObject:
   - component: {fileID: 684362206}
   - component: {fileID: 684362205}
   - component: {fileID: 684362208}
+  - component: {fileID: 684362209}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -495,6 +500,22 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &684362209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684362204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce489267499c2244eb485814d6ea6d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Level2
+  panels: []
+  currentPanel: 0
+  buttonBack: {fileID: 0}
 --- !u!1 &825410029
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1194495189
 RectTransform:
   m_ObjectHideFlags: 0
