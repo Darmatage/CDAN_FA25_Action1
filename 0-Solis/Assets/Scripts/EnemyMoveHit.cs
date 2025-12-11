@@ -26,6 +26,8 @@ public class EnemyMoveHit : MonoBehaviour {
 
     private Collider2D myCollider;
 
+	
+
     void Start () {
         anim = GetComponentInChildren<Animator>();
         rb2D = GetComponent<Rigidbody2D>();

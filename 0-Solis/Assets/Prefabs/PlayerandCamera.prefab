@@ -3060,7 +3060,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 0fdc5349a2256a948a254310d4091b56, type: 3}
   m_Resource: {fileID: 8300000, guid: 0fdc5349a2256a948a254310d4091b56, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.307
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3732,6 +3732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a96eefe57e86547b4425f574515433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossTrigger: {fileID: 0}
   gameHandler: {fileID: 0}
   pSpawn: {fileID: 0}
   playerAnimator: {fileID: 7377040545897975454}

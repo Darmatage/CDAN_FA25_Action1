@@ -13,8 +13,9 @@ public class EnemyMeleeDamage : MonoBehaviour {
 	//public retreat variable when hit by flashlight:
 	public bool isFlashlit = false;
 
-
 	public bool isHurt = false;
+
+	public AudioSource chirpSFX;
 
        void Start(){
               rend = GetComponentInChildren<Renderer> ();
@@ -58,7 +59,9 @@ public class EnemyMeleeDamage : MonoBehaviour {
        }
 
        IEnumerator Death(){
+
 			anim.SetTrigger ("Die");
+			chirpSFX.Stop();
 			yield return new WaitForSeconds(1f);
 			anim.SetBool ("isDead", true);
 			Debug.Log("You Killed a baddie. You deserve loot!");

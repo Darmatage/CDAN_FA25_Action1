@@ -6,7 +6,7 @@ public class Cloud : MonoBehaviour
 {
 	public float speed = 0.2f;
 	private Vector2 destination;
-	public int distance = 50;
+	public int distance = 1000;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
