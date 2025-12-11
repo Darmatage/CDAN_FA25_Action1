@@ -1104,7 +1104,7 @@ Transform:
   m_GameObject: {fileID: 2886150543320965000}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.71856743, w: 0.6954574}
-  m_LocalPosition: {x: 0.35, y: -0.042999983, z: 0}
+  m_LocalPosition: {x: -0.13, y: -0.03, z: 0}
   m_LocalScale: {x: 10.448999, y: 7.3065596, z: 1.548}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1148,10 +1148,10 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 33.157894
-  m_PointLightOuterAngle: 71.052605
-  m_PointLightInnerRadius: 0.3
-  m_PointLightOuterRadius: 9.49
+  m_PointLightInnerAngle: 56.807526
+  m_PointLightOuterAngle: 107.84093
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 14
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2128,6 +2128,90 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &5874350336021053705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2187961112245969770}
+  - component: {fileID: 8297136536944963036}
+  m_Layer: 0
+  m_Name: Passive Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2187961112245969770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874350336021053705}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04, y: -0.41, z: 0}
+  m_LocalScale: {x: 5.122354, y: 2.4513063, z: 2.1844}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4758548393743604352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8297136536944963036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874350336021053705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.895
+  m_Color: {r: 0.40428087, g: 0.4751385, b: 0.745283, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 8
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &5890888797328593516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,7 +2228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4237721145583210566
 Transform:
   m_ObjectHideFlags: 0
@@ -2175,8 +2259,8 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.818
-  m_Color: {r: 0.57565683, g: 0.6384682, b: 0.8792453, a: 1}
+  m_FalloffIntensity: 0.802
+  m_Color: {r: 0.40428087, g: 0.4751385, b: 0.745283, a: 1}
   m_Intensity: 1.4
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -3419,6 +3503,7 @@ Transform:
   - {fileID: 3369639871128144645}
   - {fileID: 9011992195188335718}
   - {fileID: 4237721145583210566}
+  - {fileID: 2187961112245969770}
   - {fileID: 1352523863426868926}
   - {fileID: 446462704803863428}
   m_Father: {fileID: 7651002469482072865}
